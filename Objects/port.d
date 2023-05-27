@@ -1,7 +1,7 @@
 .\objects\port.o: Src\FreeRTOS\portable\RVDS\ARM_CM3\port.c
 .\objects\port.o: .\Src\FreeRTOS\include\FreeRTOS.h
-.\objects\port.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\objects\port.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\port.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\port.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\port.o: .\Src\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\port.o: .\Src\System\utils.h
 .\objects\port.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h

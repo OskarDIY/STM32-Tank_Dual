@@ -1,6 +1,6 @@
 .\objects\i2c_device.o: Src\BSP\i2c_device.c
-.\objects\i2c_device.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\i2c_device.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\i2c_device.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\i2c_device.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\i2c_device.o: Src\BSP\i2c_driver.h
 .\objects\i2c_device.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\objects\i2c_device.o: .\Src\BSP\CMSIS\CM3\CoreSupport\core_cm3.h
@@ -31,7 +31,7 @@
 .\objects\i2c_device.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 .\objects\i2c_device.o: .\Src\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\objects\i2c_device.o: .\Src\FreeRTOS\include\FreeRTOS.h
-.\objects\i2c_device.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\i2c_device.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\i2c_device.o: .\Src\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\i2c_device.o: .\Src\System\utils.h
 .\objects\i2c_device.o: .\Src\FatFs\ff.h

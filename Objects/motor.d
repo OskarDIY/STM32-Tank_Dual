@@ -1,8 +1,8 @@
 .\objects\motor.o: Src\BSP\motor.c
-.\objects\motor.o: .\Src\System\radio.h
+.\objects\motor.o: Src\BSP\can.h
 .\objects\motor.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\objects\motor.o: .\Src\BSP\CMSIS\CM3\CoreSupport\core_cm3.h
-.\objects\motor.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\motor.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\motor.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\objects\motor.o: .\Src\User\stm32f10x_conf.h
 .\objects\motor.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -29,16 +29,17 @@
 .\objects\motor.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 .\objects\motor.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 .\objects\motor.o: .\Src\STM32F10x_StdPeriph_Driver\inc\misc.h
-.\objects\motor.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\motor.o: .\Src\System\radio.h
+.\objects\motor.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\motor.o: .\Src\BSP\nrf24l01.h
 .\objects\motor.o: Src\BSP\motor.h
 .\objects\motor.o: Src\BSP\servo.h
 .\objects\motor.o: Src\BSP\i2c_oled.h
 .\objects\motor.o: Src\BSP\usart1.h
-.\objects\motor.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\motor.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\motor.o: .\Src\User\stm32f10x_it.h
 .\objects\motor.o: .\Src\FreeRTOS\include\FreeRTOS.h
-.\objects\motor.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\motor.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\motor.o: .\Src\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\motor.o: .\Src\System\utils.h
 .\objects\motor.o: .\Src\FatFs\ff.h

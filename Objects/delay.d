@@ -2,7 +2,7 @@
 .\objects\delay.o: Src\BSP\delay.h
 .\objects\delay.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\objects\delay.o: .\Src\BSP\CMSIS\CM3\CoreSupport\core_cm3.h
-.\objects\delay.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\delay.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\delay.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\objects\delay.o: .\Src\User\stm32f10x_conf.h
 .\objects\delay.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -30,7 +30,7 @@
 .\objects\delay.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 .\objects\delay.o: .\Src\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\objects\delay.o: .\Src\FreeRTOS\include\FreeRTOS.h
-.\objects\delay.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\delay.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\delay.o: .\Src\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\delay.o: .\Src\System\utils.h
 .\objects\delay.o: .\Src\FatFs\ff.h

@@ -1,9 +1,9 @@
 .\objects\tasks.o: Src\FreeRTOS\tasks.c
-.\objects\tasks.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\tasks.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\tasks.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\tasks.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\string.h
 .\objects\tasks.o: .\Src\FreeRTOS\include\FreeRTOS.h
-.\objects\tasks.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\objects\tasks.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\tasks.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\tasks.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\tasks.o: .\Src\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\tasks.o: .\Src\System\utils.h
 .\objects\tasks.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
@@ -46,4 +46,4 @@
 .\objects\tasks.o: .\Src\FreeRTOS\include\list.h
 .\objects\tasks.o: .\Src\FreeRTOS\include\timers.h
 .\objects\tasks.o: .\Src\FreeRTOS\include\StackMacros.h
-.\objects\tasks.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\tasks.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdio.h

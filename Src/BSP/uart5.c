@@ -232,7 +232,7 @@ void Uart5Task(void *param)
 	{
 		if(ultrasonic_state2 == 2)
 		{
-			printf("ultrasonic_distance2: %d mm\n", ultrasonic_distance2);
+			//printf("ultrasonic_distance2: %d mm\n", ultrasonic_distance2);
 			
 			// 向US100超声波模块发送测量指令0x55
 			while(USART_GetFlagStatus(UART5, USART_FLAG_TXE)== RESET)

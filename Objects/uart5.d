@@ -2,7 +2,7 @@
 .\objects\uart5.o: Src\BSP\usart1.h
 .\objects\uart5.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\objects\uart5.o: .\Src\BSP\CMSIS\CM3\CoreSupport\core_cm3.h
-.\objects\uart5.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\uart5.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\uart5.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\objects\uart5.o: .\Src\User\stm32f10x_conf.h
 .\objects\uart5.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -30,19 +30,19 @@
 .\objects\uart5.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 .\objects\uart5.o: .\Src\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\objects\uart5.o: .\Src\System\radio.h
-.\objects\uart5.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\uart5.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\uart5.o: .\Src\BSP\nrf24l01.h
 .\objects\uart5.o: Src\BSP\uart5.h
 .\objects\uart5.o: .\Src\FatFs\ff.h
 .\objects\uart5.o: .\Src\FatFs\integer.h
 .\objects\uart5.o: .\Src\FatFs\ffconf.h
-.\objects\uart5.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\uart5.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\uart5.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\uart5.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\string.h
 .\objects\uart5.o: Src\BSP\led.h
 .\objects\uart5.o: Src\BSP\i2c_oled.h
 .\objects\uart5.o: Src\BSP\flash.h
 .\objects\uart5.o: .\Src\FreeRTOS\include\FreeRTOS.h
-.\objects\uart5.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\uart5.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\uart5.o: .\Src\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\uart5.o: .\Src\System\utils.h
 .\objects\uart5.o: .\Src\FreeRTOS\include\projdefs.h

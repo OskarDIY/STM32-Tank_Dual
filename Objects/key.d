@@ -2,7 +2,7 @@
 .\objects\key.o: Src\BSP\key.h
 .\objects\key.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\objects\key.o: .\Src\BSP\CMSIS\CM3\CoreSupport\core_cm3.h
-.\objects\key.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\key.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\key.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\objects\key.o: .\Src\User\stm32f10x_conf.h
 .\objects\key.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h

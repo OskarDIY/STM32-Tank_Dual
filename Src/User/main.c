@@ -72,8 +72,7 @@ int main(void)
 	// 延时初始化
 	Delay_Init(72);
 	
-	// 蜂鸣器初始化
-	Buzzer_Init();
+	Motor_Init();
 	
 	// 用户键初始化
 	UserKey_Init();
@@ -124,7 +123,7 @@ void startTask(void *arg)
 	
 	xTaskCreate(MenuTask, "MENU", 1600, NULL, 5, NULL);										/*创建显示处理任务*/
 	
-//	xTaskCreate(PlayMusic, "PlayMusic", 200, NULL, 3, NULL);			      /*创建音乐处理任务*/
+	xTaskCreate(PlayMusic, "PlayMusic", 200, NULL, 4, NULL);			      /*创建音乐处理任务*/
 	
 	xTaskCreate(PowerTask, "POWER", 100, NULL, 5, NULL);
 	

@@ -1,7 +1,7 @@
 .\objects\main.o: Src\User\main.c
 .\objects\main.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\objects\main.o: .\Src\BSP\CMSIS\CM3\CoreSupport\core_cm3.h
-.\objects\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\objects\main.o: .\Src\User\stm32f10x_conf.h
 .\objects\main.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -29,11 +29,11 @@
 .\objects\main.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 .\objects\main.o: .\Src\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\objects\main.o: Src\User\stm32f10x_it.h
-.\objects\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: .\Src\BSP\led.h
 .\objects\main.o: .\Src\BSP\usart1.h
 .\objects\main.o: .\Src\System\radio.h
-.\objects\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\main.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\main.o: .\Src\BSP\nrf24l01.h
 .\objects\main.o: .\Src\BSP\uart4.h
 .\objects\main.o: .\Src\BSP\uart5.h
@@ -41,7 +41,7 @@
 .\objects\main.o: .\Src\FatFs\ff.h
 .\objects\main.o: .\Src\FatFs\integer.h
 .\objects\main.o: .\Src\FatFs\ffconf.h
-.\objects\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\main.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\string.h
 .\objects\main.o: .\Src\BSP\key.h
 .\objects\main.o: .\Src\BSP\i2c_oled.h
 .\objects\main.o: .\Src\BSP\delay.h
@@ -56,7 +56,7 @@
 .\objects\main.o: .\Src\BSP\motor.h
 .\objects\main.o: .\Src\BSP\flash.h
 .\objects\main.o: .\Src\FreeRTOS\include\FreeRTOS.h
-.\objects\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\main.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\main.o: .\Src\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\main.o: .\Src\FreeRTOS\include\projdefs.h
 .\objects\main.o: .\Src\FreeRTOS\include\portable.h

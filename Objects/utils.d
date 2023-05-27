@@ -2,7 +2,7 @@
 .\objects\utils.o: .\Src\BSP\led.h
 .\objects\utils.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\objects\utils.o: .\Src\BSP\CMSIS\CM3\CoreSupport\core_cm3.h
-.\objects\utils.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\utils.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\utils.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\objects\utils.o: .\Src\User\stm32f10x_conf.h
 .\objects\utils.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -34,16 +34,16 @@
 .\objects\utils.o: .\Src\FatFs\integer.h
 .\objects\utils.o: .\Src\FatFs\ffconf.h
 .\objects\utils.o: .\Src\BSP\spi_flash.h
-.\objects\utils.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\utils.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\utils.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\utils.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\string.h
 .\objects\utils.o: .\Src\BSP\i2c_oled.h
 .\objects\utils.o: .\Src\BSP\usart1.h
 .\objects\utils.o: .\Src\System\radio.h
-.\objects\utils.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\utils.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\utils.o: .\Src\BSP\nrf24l01.h
 .\objects\utils.o: .\Src\BSP\flash.h
 .\objects\utils.o: .\Src\FreeRTOS\include\FreeRTOS.h
-.\objects\utils.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\utils.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\utils.o: .\Src\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\utils.o: .\Src\FreeRTOS\include\projdefs.h
 .\objects\utils.o: .\Src\FreeRTOS\include\portable.h

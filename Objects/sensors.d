@@ -1,10 +1,10 @@
 .\objects\sensors.o: Src\System\sensors.c
-.\objects\sensors.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-.\objects\sensors.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\sensors.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\math.h
+.\objects\sensors.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\sensors.o: .\Src\BSP\delay.h
 .\objects\sensors.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\objects\sensors.o: .\Src\BSP\CMSIS\CM3\CoreSupport\core_cm3.h
-.\objects\sensors.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\sensors.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\sensors.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\objects\sensors.o: .\Src\User\stm32f10x_conf.h
 .\objects\sensors.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -34,10 +34,10 @@
 .\objects\sensors.o: Src\System\filter.h
 .\objects\sensors.o: .\Src\BSP\mpu9250.h
 .\objects\sensors.o: .\Src\BSP\i2c_device.h
-.\objects\sensors.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\sensors.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\sensors.o: .\Src\BSP\i2c_driver.h
 .\objects\sensors.o: .\Src\FreeRTOS\include\FreeRTOS.h
-.\objects\sensors.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\sensors.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\sensors.o: .\Src\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\sensors.o: .\Src\System\utils.h
 .\objects\sensors.o: .\Src\FatFs\ff.h

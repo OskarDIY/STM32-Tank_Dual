@@ -2,7 +2,7 @@
 .\objects\stm32f10x_it.o: Src\User\stm32f10x_it.h
 .\objects\stm32f10x_it.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\objects\stm32f10x_it.o: .\Src\BSP\CMSIS\CM3\CoreSupport\core_cm3.h
-.\objects\stm32f10x_it.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\stm32f10x_it.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\stm32f10x_it.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\objects\stm32f10x_it.o: .\Src\User\stm32f10x_conf.h
 .\objects\stm32f10x_it.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -29,14 +29,14 @@
 .\objects\stm32f10x_it.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 .\objects\stm32f10x_it.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 .\objects\stm32f10x_it.o: .\Src\STM32F10x_StdPeriph_Driver\inc\misc.h
-.\objects\stm32f10x_it.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\stm32f10x_it.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\stm32f10x_it.o: .\Src\BSP\buzzer.h
 .\objects\stm32f10x_it.o: .\Src\BSP\usart1.h
 .\objects\stm32f10x_it.o: .\Src\System\radio.h
 .\objects\stm32f10x_it.o: .\Src\BSP\nrf24l01.h
-.\objects\stm32f10x_it.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\stm32f10x_it.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\string.h
 .\objects\stm32f10x_it.o: .\Src\FreeRTOS\include\FreeRTOS.h
-.\objects\stm32f10x_it.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\stm32f10x_it.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\stm32f10x_it.o: .\Src\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\stm32f10x_it.o: .\Src\System\utils.h
 .\objects\stm32f10x_it.o: .\Src\FatFs\ff.h
@@ -49,4 +49,4 @@
 .\objects\stm32f10x_it.o: .\Src\FreeRTOS\include\mpu_wrappers.h
 .\objects\stm32f10x_it.o: .\Src\FreeRTOS\include\task.h
 .\objects\stm32f10x_it.o: .\Src\FreeRTOS\include\list.h
-.\objects\stm32f10x_it.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\stm32f10x_it.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdio.h

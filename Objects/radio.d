@@ -2,7 +2,7 @@
 .\objects\radio.o: Src\System\obstacle.h
 .\objects\radio.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\objects\radio.o: .\Src\BSP\CMSIS\CM3\CoreSupport\core_cm3.h
-.\objects\radio.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\radio.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\radio.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\objects\radio.o: .\Src\User\stm32f10x_conf.h
 .\objects\radio.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -29,7 +29,7 @@
 .\objects\radio.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 .\objects\radio.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 .\objects\radio.o: .\Src\STM32F10x_StdPeriph_Driver\inc\misc.h
-.\objects\radio.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\radio.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\radio.o: .\Src\BSP\nrf24l01.h
 .\objects\radio.o: .\Src\BSP\motor.h
 .\objects\radio.o: .\Src\BSP\servo.h
@@ -38,10 +38,10 @@
 .\objects\radio.o: Src\System\radio.h
 .\objects\radio.o: .\Src\BSP\i2c_oled.h
 .\objects\radio.o: .\Src\BSP\usart1.h
-.\objects\radio.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\radio.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\radio.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\radio.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\string.h
 .\objects\radio.o: .\Src\FreeRTOS\include\FreeRTOS.h
-.\objects\radio.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\radio.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\radio.o: .\Src\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\radio.o: .\Src\System\utils.h
 .\objects\radio.o: .\Src\FatFs\ff.h

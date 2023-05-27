@@ -528,20 +528,16 @@ void MenuTask(void *param)
 	}
 }
 
-/**
-  * @brief  显示系统参数 
-  * @param  无
-  * @retval 无
-  */
+// 显示系统参数 
 void OLED_ShowParm(void)
 {
-	char volt1[20], volt2[20], distance1[20], distance2[20], motor1[20], motor2[20];
-//	
-	sprintf(volt2, "Main  Voltage:%5.2f", ADC_ConvertedValueLocal[1]);
-	OLED_ShowStr(0, 0, (uint8_t*)(&volt2), 1);
+	char volt1[20],volt2[20],distance1[20],distance2[20],motor1[20],motor2[20];
+
+	sprintf(volt2,"Main  Voltage:%5.2f",ADC_ConvertedValueLocal[1]);
+	OLED_ShowStr(0,0,(uint8_t*)(&volt2),1);
 	
-	sprintf(volt1, "Servo Voltage:%5.2f", ADC_ConvertedValueLocal[0]);
-	OLED_ShowStr(0, 1, (uint8_t*)(&volt1), 1);
+	sprintf(volt1, "Servo Voltage:%5.2f",ADC_ConvertedValueLocal[0]);
+	OLED_ShowStr(0,1,(uint8_t*)(&volt1),1);
 	
 	sprintf(distance1, "distance1:%5dmm", ultrasonic_distance1);
 	OLED_ShowStr(0, 2, (uint8_t*)(&distance1), 1);
@@ -549,14 +545,15 @@ void OLED_ShowParm(void)
 	sprintf(distance2, "distance2:%5dmm", ultrasonic_distance2);
 	OLED_ShowStr(0, 3, (uint8_t*)(&distance2), 1);
 	
-	sprintf(motor1, "motor1_pwm:%5d", motorStatus.motor1_pwm);
-	OLED_ShowStr(0, 4, (uint8_t*)(&motor1), 1);
+	sprintf(motor1,"motor1_pwm:%5d",motorStatus.motor1_pwm);
+	OLED_ShowStr(0,4,(uint8_t*)(&motor1),1);
 	
-	sprintf(motor2, "motor2_pwm:%5d", motorStatus.motor2_pwm);
-	OLED_ShowStr(0, 5, (uint8_t*)(&motor2), 1);
+	sprintf(motor2,"motor2_pwm:%5d",motorStatus.motor2_pwm);
+	OLED_ShowStr(0,5,(uint8_t*)(&motor2),1);
 	
-	
-//	
+	vTaskDelay(50);	
+}
+
 //	vTaskDelay(2000);
 //	OLED_CLS();
 //	
@@ -567,11 +564,7 @@ void OLED_ShowParm(void)
 //	vTaskDelay(2000);
 //	OLED_CLS();
 	
-	
 //	sprintf(volt1, "Yaw: %5.2f", state.attitude.yaw);
 //	OLED_ShowStr(0, 1, (uint8_t*)(&volt1), 1);
-	
-	vTaskDelay(50);
 //	OLED_CLS();
-	
-}
+

@@ -236,7 +236,8 @@ void SysTick_Handler(void)
 	if(xTaskGetSchedulerState()!=taskSCHEDULER_NOT_STARTED)	/*系统已经运行*/
 	{
 		xPortSysTickHandler();	
-	}else
+	}
+	else
 	{
 		sysTickCnt++;	/*调度开启之前计数*/
 	}

@@ -1,9 +1,9 @@
 .\objects\ak8963.o: Src\BSP\ak8963.c
-.\objects\ak8963.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\ak8963.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\ak8963.o: Src\BSP\delay.h
 .\objects\ak8963.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\objects\ak8963.o: .\Src\BSP\CMSIS\CM3\CoreSupport\core_cm3.h
-.\objects\ak8963.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ak8963.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\ak8963.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\objects\ak8963.o: .\Src\User\stm32f10x_conf.h
 .\objects\ak8963.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -34,7 +34,7 @@
 .\objects\ak8963.o: Src\BSP\i2c_device.h
 .\objects\ak8963.o: Src\BSP\i2c_driver.h
 .\objects\ak8963.o: .\Src\FreeRTOS\include\FreeRTOS.h
-.\objects\ak8963.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\ak8963.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\ak8963.o: .\Src\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\ak8963.o: .\Src\System\utils.h
 .\objects\ak8963.o: .\Src\FatFs\ff.h
@@ -49,4 +49,4 @@
 .\objects\ak8963.o: .\Src\FreeRTOS\include\list.h
 .\objects\ak8963.o: .\Src\FreeRTOS\include\semphr.h
 .\objects\ak8963.o: .\Src\FreeRTOS\include\queue.h
-.\objects\ak8963.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\ak8963.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdio.h

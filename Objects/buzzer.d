@@ -2,7 +2,7 @@
 .\objects\buzzer.o: Src\BSP\buzzer.h
 .\objects\buzzer.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\objects\buzzer.o: .\Src\BSP\CMSIS\CM3\CoreSupport\core_cm3.h
-.\objects\buzzer.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\buzzer.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\buzzer.o: .\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\objects\buzzer.o: .\Src\User\stm32f10x_conf.h
 .\objects\buzzer.o: .\Src\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -31,4 +31,18 @@
 .\objects\buzzer.o: .\Src\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\objects\buzzer.o: Src\BSP\delay.h
 .\objects\buzzer.o: Src\BSP\led.h
-.\objects\buzzer.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\buzzer.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\buzzer.o: .\Src\FreeRTOS\include\FreeRTOS.h
+.\objects\buzzer.o: D:\Program Files\Keil_ARM\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\buzzer.o: .\Src\FreeRTOS\include\FreeRTOSConfig.h
+.\objects\buzzer.o: .\Src\System\utils.h
+.\objects\buzzer.o: .\Src\FatFs\ff.h
+.\objects\buzzer.o: .\Src\FatFs\integer.h
+.\objects\buzzer.o: .\Src\FatFs\ffconf.h
+.\objects\buzzer.o: .\Src\FreeRTOS\include\projdefs.h
+.\objects\buzzer.o: .\Src\FreeRTOS\include\portable.h
+.\objects\buzzer.o: .\Src\FreeRTOS\include\deprecated_definitions.h
+.\objects\buzzer.o: .\Src\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h
+.\objects\buzzer.o: .\Src\FreeRTOS\include\mpu_wrappers.h
+.\objects\buzzer.o: .\Src\FreeRTOS\include\task.h
+.\objects\buzzer.o: .\Src\FreeRTOS\include\list.h

@@ -4,7 +4,7 @@
   * @author  Oskar Wei
   * @version V1.0
   * @date    2020-06-06
-  * @brief   servo init
+  * @brief   servo init 舵机驱动程序
   ******************************************************************************
   * @attention
   *
@@ -30,6 +30,7 @@ servoPWM_t servoPWM =
 	1500
 };
 
+// 初始化定时器，以便向舵机接口输出合适的PWM信号
 void TIM3_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStructure;
@@ -103,6 +104,7 @@ void TIM3_Init(void)
 	TIM_Cmd(TIM3, ENABLE);
 }
 
+// 初始化定时器，以便向舵机接口输出合适的PWM信号
 void TIM8_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStructure;
@@ -201,11 +203,8 @@ uint16_t Duty_to_PWM(float duty)
 }
 
 
-/**
-* @brief 直接设置舵机PWM值, 舵机PWM范围500us ~ 2500us, 中值:1500us, 舵机通道取值范围1 ~ 8
-  * @param    channel: 1~8, servo pwm duty range: 500us ~ 2500us
-  * @retval None
-  */
+
+// 设置舵机PWM值,范围500us~2500us,中值:1500us,通道范围1~8
 void Set_Servo_PWM(uint8_t channel, uint16_t pwm)
 {
 	TIM_TypeDef *tim;
@@ -214,7 +213,6 @@ void Set_Servo_PWM(uint8_t channel, uint16_t pwm)
 	{
 		return;
 	}
-	
 	// 如果PWM值不在区间[500,2500]内,则不处理
 	if(pwm > 2500)
 	{
@@ -234,14 +232,12 @@ void Set_Servo_PWM(uint8_t channel, uint16_t pwm)
 	{
 		tim = TIM3;
 	}
-	
 	switch(channel)
 	{
 		case 1: tim->CCR1 = pwm; break;
 		case 2: tim->CCR2 = pwm; break;
 		case 3: tim->CCR3 = pwm; break;
 		case 4: tim->CCR4 = pwm; break;
-		
 		default:
 			break;
 	}
