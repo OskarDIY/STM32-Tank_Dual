@@ -123,12 +123,15 @@ static __inline float FastAbs(float x){
 	return (float)y.f;
 }
 
-static __inline double FastAbsD(double x){
+/*
+static __inline double FastAbsD(double x)
+{
 	union { unsigned __int64 i; double d;} y;
 	y.d = x;
 	y.i = y.i & 0x7FFFFFFFFFFFFFFFLL;
 	return (double)y.d;
 }
+*/
 
 //////////////////////////////////////////////////////////////////////////
 Double FastSqrtID(Double dx);

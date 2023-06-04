@@ -60,7 +60,7 @@
 TaskHandle_t startTaskHandle;
 extern xTaskHandle radiolinkTaskHandle;
 
-static void startTask(void *arg);
+void startTask(void *arg);
 
 uint8_t can_buf[8] = {'H','i','!','C','A','N','!','\n'};
 

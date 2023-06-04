@@ -753,6 +753,7 @@ float FastCos(float x)
 	return (cosVal);
 }
 
+/*
 Double FastSqrtID(Double dx)
 {
 	Double dy;
@@ -768,6 +769,7 @@ Double FastSqrtID(Double dx)
 	return dy;
 }
 
+
 Double FastSqrtD(Double dx)
 {
 	Double dy;
@@ -781,3 +783,5 @@ Double FastSqrtD(Double dx)
 	dy = DoubleMul(dy, DoubleSub(doubleToDouble(1.5), DoubleMul(DoubleMul(dhalfx, dy), dy)));
 	return DoubleDiv(doubleToDouble(1.0), dx);
 }
+
+*/

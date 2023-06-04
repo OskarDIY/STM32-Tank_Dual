@@ -189,7 +189,7 @@ DRESULT disk_ioctl (
 }
 #endif
 
-__weak DWORD get_fattime(void) {
+DWORD get_fattime(void) {
 	/* 返回当前时间戳 */
 	return	  ((DWORD)(2015 - 1980) << 25)	/* Year 2015 */
 			| ((DWORD)1 << 21)				/* Month 1 */

@@ -1,0 +1,2 @@
+../Src/FreeRTOS/portable/MemMang/heap_3.c:100:7:pvPortMalloc	24	static
+../Src/FreeRTOS/portable/MemMang/heap_3.c:125:6:vPortFree	16	static

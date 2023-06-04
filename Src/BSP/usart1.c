@@ -9,7 +9,7 @@
   * @attention
   *
   * Mail: 990092230@qq.com
-  * Shop: www.mindsilicon.com
+  * Blog: www.mindsilicon.com
   *
   ******************************************************************************
   */ 

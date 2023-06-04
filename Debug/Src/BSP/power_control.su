@@ -1,0 +1,4 @@
+../Src/BSP/power_control.c:32:6:ADJ_Outpt_Init	24	static
+../Src/BSP/power_control.c:63:6:MAIN_Output_Init	24	static
+../Src/BSP/power_control.c:93:6:PowerControl_Init	16	static
+../Src/BSP/power_control.c:126:6:PowerTask	16	static

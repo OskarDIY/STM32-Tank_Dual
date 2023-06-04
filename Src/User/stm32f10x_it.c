@@ -74,7 +74,8 @@ void NMI_Handler(void)
 /**
  * @brief  This function handles Hard Fault exception.
  */
-__asm void HardFault_Handler(void)
+/*
+void HardFault_Handler(void)
 {
 	//http://www.st.com/mcu/forums-cat-6778-23.html
 	//****************************************************
@@ -83,14 +84,15 @@ __asm void HardFault_Handler(void)
 	// asm (" MOVS r0, #1 \n"
 	// " LDM r0,{r1-r2} \n"
 	// " BX LR; \n");
-	PRESERVE8
-    IMPORT printHardFault
-    TST r14, #4
-    ITE EQ
-    MRSEQ R0, MSP
-    MRSNE R0, PSP
-    B printHardFault
+	asm("PRESERVE8")
+	asm("IMPORT printHardFault")
+    asm("TST r14, #4")
+	asm("ITE EQ")
+	asm("MRSEQ R0, MSP")
+	asm("MRSNE R0, PSP")
+	asm("B printHardFault")
 }
+*/
 
 uint32_t hard_fault_index = 0;
 

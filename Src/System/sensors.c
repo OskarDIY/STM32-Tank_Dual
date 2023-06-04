@@ -90,11 +90,11 @@ static xQueueHandle magnetometerDataQueue;
 static xSemaphoreHandle sensorsDataReady;
 
 
-static void applyAxis3fLpf(lpf2pData *data, Axis3f* in);
-static void sensorsBiasObjInit(BiasObj* bias);
-static void sensorsCalculateVarianceAndMean(BiasObj* bias, Axis3f* varOut, Axis3f* meanOut);
-static bool sensorsFindBiasValue(BiasObj* bias);
-static void sensorsAddBiasValue(BiasObj* bias, int16_t x, int16_t y, int16_t z);
+void applyAxis3fLpf(lpf2pData *data, Axis3f* in);
+void sensorsBiasObjInit(BiasObj* bias);
+void sensorsCalculateVarianceAndMean(BiasObj* bias, Axis3f* varOut, Axis3f* meanOut);
+bool sensorsFindBiasValue(BiasObj* bias);
+void sensorsAddBiasValue(BiasObj* bias, int16_t x, int16_t y, int16_t z);
 
 
 /*从队列读取陀螺数据*/
@@ -126,7 +126,7 @@ bool sensorsReadMag(Axis3f *mag)
 }
 
 /*传感器中断初始化*/
-static void sensorsInterruptInit(void)
+void sensorsInterruptInit(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
 	EXTI_InitTypeDef EXTI_InitStructure;
@@ -184,13 +184,13 @@ void sensorsDeviceInit(void)
 		printf("MPU6500 I2C connection [FAIL].\n");
 	}
 	
-	mpu6500SetSleepEnabled(false);												// 唤醒MPU6500	
+	mpu6500SetSleepEnabled(false);												// 唤醒MPU6500
 	vTaskDelay(10);		
-	mpu6500SetClockSource(MPU6500_CLOCK_PLL_XGYRO);				// 设置X轴陀螺作为时钟	
-	vTaskDelay(10);																				// 延时等待时钟稳定	
-	mpu6500SetTempSensorEnabled(true);										// 使能温度传感器	
-	mpu6500SetIntEnabled(false);													// 关闭中断	
-	mpu6500SetI2CBypassEnabled(true);											// 旁路模式，磁力计和气压连接到主IIC	
+	mpu6500SetClockSource(MPU6500_CLOCK_PLL_XGYRO);				// 设置X轴陀螺作为时钟
+	vTaskDelay(10);																				// 延时等待时钟稳定
+	mpu6500SetTempSensorEnabled(true);										// 使能温度传感器
+	mpu6500SetIntEnabled(false);													// 关闭中断
+	mpu6500SetI2CBypassEnabled(true);											// 旁路模式，磁力计和气压连接到主IIC
 	mpu6500SetFullScaleGyroRange(SENSORS_GYRO_FS_CFG);		// 设置陀螺量程, 2000°/s
 	mpu6500SetFullScaleAccelRange(SENSORS_ACCEL_FS_CFG);	// 设置加速计量程, 2G
 	mpu6500SetAccelDLPF(MPU9250_ACCEL_DLPF_BW_45);				// 设置加速计数字低通滤波
@@ -230,7 +230,7 @@ void sensorsDeviceInit(void)
 	magnetometerDataQueue = xQueueCreate(1, sizeof(Axis3f));
 }
 /*传感器偏置初始化*/
-static void sensorsBiasObjInit(BiasObj* bias)
+void sensorsBiasObjInit(BiasObj* bias)
 {
 	bias->isBufferFilled = false;
 	bias->bufHead = bias->buffer;
@@ -250,7 +250,7 @@ bool sensorsTest(void)
 }
 
 /*计算方差和平均值*/
-static void sensorsCalculateVarianceAndMean(BiasObj* bias, Axis3f* varOut, Axis3f* meanOut)
+void sensorsCalculateVarianceAndMean(BiasObj* bias, Axis3f* varOut, Axis3f* meanOut)
 {
 	u32 i;
 	int64_t sum[3] = {0};
@@ -275,7 +275,7 @@ static void sensorsCalculateVarianceAndMean(BiasObj* bias, Axis3f* varOut, Axis3
 	meanOut->z = (float)sum[2] / SENSORS_NBR_OF_BIAS_SAMPLES;
 }
 /*传感器查找偏置值*/
-static bool sensorsFindBiasValue(BiasObj* bias)
+bool sensorsFindBiasValue(BiasObj* bias)
 {
 	bool foundbias = false;
 
@@ -312,7 +312,7 @@ void sensorsInit(void)
 	isInit = true;
 }
 /*设置传感器从模式读取*/
-static void sensorsSetupSlaveRead(void)
+void sensorsSetupSlaveRead(void)
 {
 	mpu6500SetSlave4MasterDelay(9); 	// 从机读取速率: 100Hz = (1000Hz / (1 + 9))
 
@@ -344,7 +344,7 @@ static void sensorsSetupSlaveRead(void)
 /**
  * 往方差缓冲区（循环缓冲区）添加一个新值，缓冲区满后，替换旧的的值
  */
-static void sensorsAddBiasValue(BiasObj* bias, int16_t x, int16_t y, int16_t z)
+void sensorsAddBiasValue(BiasObj* bias, int16_t x, int16_t y, int16_t z)
 {
 	bias->bufHead->x = x;
 	bias->bufHead->y = y;
@@ -361,7 +361,7 @@ static void sensorsAddBiasValue(BiasObj* bias, int16_t x, int16_t y, int16_t z)
 /**
  * 根据样本计算重力加速度缩放因子
  */
-static bool processAccScale(int16_t ax, int16_t ay, int16_t az)
+bool processAccScale(int16_t ax, int16_t ay, int16_t az)
 {
 	static bool accBiasFound = false;
 	static uint32_t accScaleSumCount = 0;
@@ -384,7 +384,7 @@ static bool processAccScale(int16_t ax, int16_t ay, int16_t az)
 /**
  * 计算陀螺方差
  */
-static bool processGyroBias(int16_t gx, int16_t gy, int16_t gz, Axis3f *gyroBiasOut)
+bool processGyroBias(int16_t gx, int16_t gy, int16_t gz, Axis3f *gyroBiasOut)
 {
 	sensorsAddBiasValue(&gyroBiasRunning, gx, gy, gz);
 
@@ -637,7 +637,7 @@ void SensorTask(void *param)
 //		}
 		
 		// 校准磁力计
-		// 会有3个处理阶段, 
+		// 会有3个处理阶段,
 		// 第一阶段收到上位机读取磁力计数据的指令, 然后持续向上位机发送磁力计数据
 		// 第二个阶段, 上位机已经收集到了足够的数据, 发送指令要求下位机停止发送数据
 		// 第三个阶段, 上位机已经计算好了校准参数, 这是上位机发送校准参数给下位机, 下位机保存此数据
@@ -740,7 +740,7 @@ void sensorsAcquire(sensorData_t *sensors, const u32 tick)
 
 
 /*二阶低通滤波*/
-static void applyAxis3fLpf(lpf2pData *data, Axis3f* in)
+void applyAxis3fLpf(lpf2pData *data, Axis3f* in)
 {
 	for (uint8_t i = 0; i < 3; i++) 
 	{
@@ -788,3 +788,4 @@ void EXTI2_IRQHandler(void)
 		
 	}
 }
+

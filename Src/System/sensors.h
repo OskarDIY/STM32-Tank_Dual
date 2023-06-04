@@ -228,12 +228,14 @@ typedef struct
 	enum dir_e flipDir;		/*·­¹ö·½Ïò*/
 } control_t;
 
+/*
 typedef enum
 {
 	modeDisable = 0,
 	modeAbs,
 	modeVelocity
 } mode_t;
+*/
 
 typedef struct
 {

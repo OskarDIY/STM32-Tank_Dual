@@ -9,7 +9,7 @@
   * @attention
   *
   * Mail: 990092230@qq.com
-  * Shop: www.mindsilicon.com
+  * Blog: www.mindsilicon.com
   *
 	* 该程序仅供学习使用，未经作者允许，不得用于其它任何用途
   ******************************************************************************
@@ -200,12 +200,12 @@ void ParseRadioMsg(radioMsg_t *msg)
 	servoPWM.servo1 = Duty_to_PWM(duty[0]);
 	
 	// 其他舵机的控制, 用按键控制, 分别为data[5]和data[6]
-	// data的第6和第7字节, 这两个字节共16位, 对应手柄的16个通道, 
+	// data的第6和第7字节, 这两个字节共16位, 对应手柄的16个通道,
 	// 从最高位第16位到第1位, 依次是：L2, L1, LU, LL, LD, LR, SE, ST, RL, RD, RR, RU, R1, R2, R-KEY, L-KEY
 	// 其中R-KEY和L-KEY分别是左右摇杆向下按下对应的按键
 	keys = (msg->data[5] << 8) | msg->data[6];
 	
-	// 2号舵机控制, 用L1和R1键控制正转和反转, 
+	// 2号舵机控制, 用L1和R1键控制正转和反转,
 	if((keys & (1 << 14)) && (!(keys & (1 << 3))))				// L1按下且R1松开时
 	{
 		duty[1] -= 0.005;
@@ -219,7 +219,7 @@ void ParseRadioMsg(radioMsg_t *msg)
 		servoPWM.servo2 = Duty_to_PWM(duty[1]);
 	}
 	
-	// 3号舵机控制, 用L2和R2键控制正转和反转, 
+	// 3号舵机控制, 用L2和R2键控制正转和反转,
 	if((keys & (1 << 15)) && (!(keys & (1 << 2))))				// L2按下且R2松开时
 	{
 		duty[2] -= 0.005;
@@ -241,7 +241,7 @@ void ParseRadioMsg(radioMsg_t *msg)
 		servoPWM.servo3 = Duty_to_PWM(duty[2]);
 	}
 	
-	// 4号舵机控制, 用LL和LR键控制正转和反转, 
+	// 4号舵机控制, 用LL和LR键控制正转和反转,
 	if((keys & (1 << 12)) && (!(keys & (1 << 10))))				// LL按下且LR松开时
 	{
 		duty[3] -= 0.005;
@@ -255,7 +255,7 @@ void ParseRadioMsg(radioMsg_t *msg)
 		servoPWM.servo4 = Duty_to_PWM(duty[3]);
 	}
 	
-	// 5号舵机控制, 用LU和LD键控制正转和反转, 
+	// 5号舵机控制, 用LU和LD键控制正转和反转,
 	if((keys & (1 << 13)) && (!(keys & (1 << 11))))				// LU按下且LD松开时
 	{
 		duty[4] -= 0.005;
@@ -269,7 +269,7 @@ void ParseRadioMsg(radioMsg_t *msg)
 		servoPWM.servo5 = Duty_to_PWM(duty[4]);
 	}
 	
-	// 6号舵机控制, 用RL和RR键控制正转和反转, 
+	// 6号舵机控制, 用RL和RR键控制正转和反转,
 	if((keys & (1 << 7)) && (!(keys & (1 << 5))))				// RL按下且RR松开时
 	{
 		duty[5] -= 0.005;
@@ -283,7 +283,7 @@ void ParseRadioMsg(radioMsg_t *msg)
 		servoPWM.servo6 = Duty_to_PWM(duty[5]);
 	}
 	
-	// 7号舵机控制, 用RU和RD键控制正转和反转, 
+	// 7号舵机控制, 用RU和RD键控制正转和反转,
 	if((keys & (1 << 4)) && (!(keys & (1 << 6))))				// RU按下且RD松开时
 	{
 		duty[6] -= 0.005;
@@ -297,7 +297,7 @@ void ParseRadioMsg(radioMsg_t *msg)
 		servoPWM.servo7 = Duty_to_PWM(duty[6]);
 	}
 	
-	// 8号舵机控制, 用SE和ST键控制正转和反转, 
+	// 8号舵机控制, 用SE和ST键控制正转和反转,
 	if((keys & (1 << 9)) && (!(keys & (1 << 8))))					// SE按下且ST松开时
 	{
 		duty[7] -= 0.005;
@@ -338,6 +338,9 @@ void radiolinkEnable(FunctionalState state)
 		vTaskSuspend(radiolinkTaskHandle);
 	}
 }
+
+
+
 
 
 

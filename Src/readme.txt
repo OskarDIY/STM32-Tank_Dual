@@ -1,5 +1,3 @@
-×÷ÕßÓÊÏä£ºoskar@mindsilicon.com
-
 
 
 

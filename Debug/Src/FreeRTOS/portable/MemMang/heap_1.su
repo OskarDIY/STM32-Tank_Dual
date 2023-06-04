@@ -1,0 +1,4 @@
+../Src/FreeRTOS/portable/MemMang/heap_1.c:111:7:pvPortMalloc	24	static
+../Src/FreeRTOS/portable/MemMang/heap_1.c:163:6:vPortFree	16	static
+../Src/FreeRTOS/portable/MemMang/heap_1.c:175:6:vPortInitialiseBlocks	4	static
+../Src/FreeRTOS/portable/MemMang/heap_1.c:182:8:xPortGetFreeHeapSize	4	static

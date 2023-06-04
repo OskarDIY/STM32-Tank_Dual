@@ -1,0 +1,4 @@
+../Src/EKF/ekf.c:146:6:EKF_AHRSInit	80	static
+../Src/EKF/ekf.c:159:6:EKF_AHRSUpdate	264	static
+../Src/EKF/ekf.c:308:6:EKF_AHRSGetQ	0	static
+../Src/EKF/ekf.c:316:6:EKF_AHRSGetAngle	40	static

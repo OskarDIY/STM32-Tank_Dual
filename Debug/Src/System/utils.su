@@ -1,0 +1,8 @@
+../Src/System/utils.c:43:6:Erase_SPI_Flash	8	static
+../Src/System/utils.c:136:9:scan_files	96	static
+../Src/System/utils.c:55:6:FileSystem_Init	24	static,ignoring_inline_asm
+../Src/System/utils.c:193:6:FileSystem_Test	16	static
+../Src/System/utils.c:317:6:storeAssertSnapshotData	0	static
+../Src/System/utils.c:324:6:assertFail	8	static,ignoring_inline_asm
+../Src/System/utils.c:334:6:printAssertSnapshotData	0	static
+../Src/System/utils.c:393:10:CRC_Table	16	static
