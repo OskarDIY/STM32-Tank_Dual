@@ -42,7 +42,7 @@
 #include "radio.h"
 #include "flash.h"
 
-#include "FreeRTOS.h"	// 此处"x"提示,是因为Keil误报,与代码无关，没有影响
+#include "FreeRTOS.h"
 #include "task.h"
 
 #include "i2c_device.h"
