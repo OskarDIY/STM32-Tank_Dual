@@ -1,7 +1,0 @@
-../Src/System/radio.c:66:13:nrf_interruptCallback	16	static
-../Src/System/radio.c:93:6:radiolinkInit	8	static
-../Src/System/radio.c:175:6:ParseRadioMsg	24	static
-../Src/System/radio.c:109:6:RadioTask	104	static
-../Src/System/radio.c:318:10:radioinkFailRxcount	0	static
-../Src/System/radio.c:324:6:radiolinkConnectStatus	0	static
-../Src/System/radio.c:330:6:radiolinkEnable	0	static

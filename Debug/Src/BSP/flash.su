@@ -1,2 +1,0 @@
-../Src/BSP/flash.c:96:6:SaveConfigData	40	static
-../Src/BSP/flash.c:35:6:LoadConfigData	32	static

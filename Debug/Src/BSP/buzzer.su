@@ -1,4 +1,0 @@
-../Src/BSP/buzzer.c:29:6:TIM6_Init	32	static
-../Src/BSP/buzzer.c:68:6:TIM6_IRQHandler	8	static
-../Src/BSP/buzzer.c:81:6:Buzzer_Init	24	static
-../Src/BSP/buzzer.c:99:6:PlayMusic	8	static

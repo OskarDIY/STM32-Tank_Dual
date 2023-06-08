@@ -1,8 +1,0 @@
-../Src/BSP/delay.c:9:6:Delay	0	static
-../Src/BSP/delay.c:15:6:Delay_ns	0	static
-../Src/BSP/delay.c:21:6:Delay_us	0	static
-../Src/BSP/delay.c:29:6:Delay_ms	0	static
-../Src/BSP/delay.c:60:6:Delay_Init	8	static
-../Src/BSP/delay.c:93:6:delay_us	12	static
-../Src/BSP/delay.c:117:6:delay_ms	16	static
-../Src/BSP/delay.c:190:6:delay_xms	16	static

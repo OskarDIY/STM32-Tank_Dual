@@ -1,3 +1,0 @@
-../Src/BSP/can.c:32:9:CAN_Mode_Init	64	static
-../Src/BSP/can.c:116:9:CanSendMsg	48	static
-../Src/BSP/can.c:151:9:CanReceiveMsg	32	static
