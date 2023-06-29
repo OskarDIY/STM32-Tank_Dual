@@ -1,0 +1,7 @@
+usart1.c:42:6:USART1_Init	1
+usart1.c:101:6:USART1_IRQHandler	12
+usart1.c:182:6:Usart1LinkStatus	1
+usart1.c:233:6:ProcessMsg	28
+usart1.c:189:6:Usart1Task	3
+stdio.h:214:5:fputc	2
+stdio.h:212:5:fgetc	2

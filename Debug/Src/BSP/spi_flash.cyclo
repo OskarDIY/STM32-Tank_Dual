@@ -1,0 +1,16 @@
+spi_flash.c:27:6:SPI_FLASH_Init	1
+spi_flash.c:403:4:SPI_FLASH_SendByte	5
+spi_flash.c:272:6:SPI_FLASH_BufferRead	2
+spi_flash.c:305:5:SPI_FLASH_ReadID	1
+spi_flash.c:337:5:SPI_FLASH_ReadDeviceID	1
+spi_flash.c:370:6:SPI_FLASH_StartReadSequence	1
+spi_flash.c:393:4:SPI_FLASH_ReadByte	1
+spi_flash.c:431:5:SPI_FLASH_SendHalfWord	5
+spi_flash.c:458:6:SPI_FLASH_WriteEnable	1
+spi_flash.c:478:6:SPI_FLASH_WaitForWriteEnd	2
+spi_flash.c:82:6:SPI_FLASH_SectorErase	1
+spi_flash.c:109:6:SPI_FLASH_BulkErase	1
+spi_flash.c:133:6:SPI_FLASH_PageWrite	3
+spi_flash.c:178:6:SPI_FLASH_BufferWrite	8
+spi_flash.c:502:6:SPI_Flash_PowerDown	1
+spi_flash.c:515:6:SPI_Flash_WAKEUP	1

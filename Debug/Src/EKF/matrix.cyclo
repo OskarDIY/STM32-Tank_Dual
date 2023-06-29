@@ -1,0 +1,13 @@
+matrix.c:27:12:mat_identity	3
+matrix.c:41:6:arm_mat_zero_f32	1
+matrix.c:53:12:arm_mat_identity_f32	3
+matrix.c:68:12:arm_mat_remainlower_f32	3
+matrix.c:89:12:arm_mat_fill_f32	3
+matrix.c:107:12:arm_mat_chol_f32	8
+matrix.c:145:6:arm_mat_getsubmatrix_f32	3
+matrix.c:162:6:arm_mat_setsubmatrix_f32	3
+matrix.c:179:6:arm_mat_getcolumn_f32	2
+matrix.c:187:6:arm_mat_setcolumn_f32	2
+matrix.c:195:6:arm_mat_cumsum_f32	3
+matrix.c:212:6:arm_fill_f32	3
+matrix.c:271:5:arm_mat_qr_decompositionT_f32	11

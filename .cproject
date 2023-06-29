@@ -50,16 +50,16 @@
 									<listOptionValue builtIn="false" value="STM32F10X_HD"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.includepaths.1730952045" name="Include paths (-I)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.includepaths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;D:\ProgramData\STM32CubeIDE\workspace_1.10.1\Tank_Dual_Pro\Src\FreeRTOS\portable\GCC\ARM_CM3&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\ProgramData\STM32CubeIDE\workspace_1.10.1\Tank_Dual_Pro\Src\BSP&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\ProgramData\STM32CubeIDE\workspace_1.10.1\Tank_Dual_Pro\Src\BSP\CMSIS\CM3\DeviceSupport\ST\STM32F10x&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\ProgramData\STM32CubeIDE\workspace_1.10.1\Tank_Dual_Pro\Src\BSP\CMSIS\CM3\CoreSupport&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\ProgramData\STM32CubeIDE\workspace_1.10.1\Tank_Dual_Pro\Src\EKF&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\ProgramData\STM32CubeIDE\workspace_1.10.1\Tank_Dual_Pro\Src\FatFs&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\ProgramData\STM32CubeIDE\workspace_1.10.1\Tank_Dual_Pro\Src\FreeRTOS\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\ProgramData\STM32CubeIDE\workspace_1.10.1\Tank_Dual_Pro\Src\System&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\ProgramData\STM32CubeIDE\workspace_1.10.1\Tank_Dual_Pro\Src\STM32F10x_StdPeriph_Driver\inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\ProgramData\STM32CubeIDE\workspace_1.10.1\Tank_Dual_Pro\Src\User&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Src/FreeRTOS/portable/GCC/ARM_CM3}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Src/BSP}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Src/BSP/CMSIS/CM3/DeviceSupport/ST/STM32F10x}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Src/BSP/CMSIS/CM3/CoreSupport}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Src/EKF}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Src/FatFs}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Src/FreeRTOS/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Src/System}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Src/STM32F10x_StdPeriph_Driver/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Src/User}&quot;"/>
 								</option>
 								<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.fdata.1415293854" name="Place data in their own sections (-fdata-sections)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.fdata" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.ffunction.1288446539" name="Place functions in their own sections (-ffunction-sections)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.ffunction" useByScannerDiscovery="false" value="true" valueType="boolean"/>

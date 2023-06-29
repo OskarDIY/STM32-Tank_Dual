@@ -1,0 +1,14 @@
+../Src/FreeRTOS/timers.c:930:13:prvCheckForValidListAndQueue	24	static
+../Src/FreeRTOS/timers.c:683:19:prvInsertTimerInActiveList	8	static
+../Src/FreeRTOS/timers.c:259:12:xTimerCreateTimerTask	16	static
+../Src/FreeRTOS/timers.c:314:16:xTimerCreate	24	static
+../Src/FreeRTOS/timers.c:417:12:xTimerGenericCommand	40	static
+../Src/FreeRTOS/timers.c:660:19:prvSampleTimeNow	56	static
+../Src/FreeRTOS/timers.c:538:13:prvTimerTask	56	static,ignoring_inline_asm
+../Src/FreeRTOS/timers.c:460:14:xTimerGetTimerDaemonTaskHandle	8	static
+../Src/FreeRTOS/timers.c:469:12:xTimerGetPeriod	8	static
+../Src/FreeRTOS/timers.c:478:12:xTimerGetExpiryTime	8	static
+../Src/FreeRTOS/timers.c:489:14:pcTimerGetName	8	static
+../Src/FreeRTOS/timers.c:981:12:xTimerIsTimerActive	8	static
+../Src/FreeRTOS/timers.c:1002:7:pvTimerGetTimerID	8	static
+../Src/FreeRTOS/timers.c:1019:6:vTimerSetTimerID	16	static

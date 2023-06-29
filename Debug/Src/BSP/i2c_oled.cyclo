@@ -1,0 +1,17 @@
+i2c_oled.c:35:6:I2C2_Init	1
+i2c_oled.c:68:6:I2C2_WriteByte	6
+i2c_oled.c:95:6:OLED_WriteCmd	1
+i2c_oled.c:104:6:OLED_WriteData	1
+i2c_oled.c:110:6:OLED_Init	1
+i2c_oled.c:146:6:OLED_Reset	1
+i2c_oled.c:179:6:OLED_SetPos	1
+i2c_oled.c:187:6:OLED_Fill	3
+i2c_oled.c:202:6:OLED_CLS	2
+i2c_oled.c:221:6:OLED_ON	1
+i2c_oled.c:234:6:OLED_OFF	1
+i2c_oled.c:247:6:OLED_ShowStr	7
+i2c_oled.c:304:6:OLED_ShowCN	3
+i2c_oled.c:331:6:OLED_DrawBMP	2
+i2c_oled.c:359:6:PlayAnimation	3
+i2c_oled.c:532:6:OLED_ShowParm	1
+i2c_oled.c:412:6:MenuTask	12

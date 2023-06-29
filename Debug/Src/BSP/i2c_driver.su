@@ -1,0 +1,12 @@
+../Src/BSP/i2c_driver.c:627:13:i2cdrvClearDMA	8	static
+../Src/BSP/i2c_driver.c:176:13:i2cNotifyClient.constprop	16	static,ignoring_inline_asm
+../Src/BSP/i2c_driver.c:170:13:i2cTryNextMessage.constprop	0	static
+../Src/BSP/i2c_driver.c:140:20:i2cdrvRoughLoopDelay.constprop	8	static
+../Src/BSP/i2c_driver.c:241:13:i2cdrvInitBus	64	static
+../Src/BSP/i2c_driver.c:343:6:i2cdrvInit	0	static
+../Src/BSP/i2c_driver.c:351:6:i2cdrvCreateMessage	0	static
+../Src/BSP/i2c_driver.c:370:6:i2cdrvCreateMessageIntAddr	0	static
+../Src/BSP/i2c_driver.c:392:6:i2cdrvMessageTransfer	16	static
+../Src/BSP/i2c_driver.c:680:6:I2C2_ER_IRQHandler	8	static
+../Src/BSP/i2c_driver.c:685:6:I2C2_EV_IRQHandler	24	static,ignoring_inline_asm
+../Src/BSP/i2c_driver.c:690:6:DMA1_Channel5_IRQHandler	8	static

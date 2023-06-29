@@ -1,0 +1,11 @@
+../Src/BSP/i2c_device.c:25:5:i2cdevInit	8	static
+../Src/BSP/i2c_device.c:74:6:i2cdevRead	56	static
+../Src/BSP/i2c_device.c:35:6:i2cdevReadByte	16	static
+../Src/BSP/i2c_device.c:57:6:i2cdevReadBits	24	static
+../Src/BSP/i2c_device.c:43:6:i2cdevReadBit	24	static
+../Src/BSP/i2c_device.c:92:6:i2cdevRead16	48	static
+../Src/BSP/i2c_device.c:140:6:i2cdevWrite	56	static
+../Src/BSP/i2c_device.c:103:6:i2cdevWriteByte	24	static
+../Src/BSP/i2c_device.c:110:6:i2cdevWriteBit	40	static
+../Src/BSP/i2c_device.c:120:6:i2cdevWriteBits	40	static
+../Src/BSP/i2c_device.c:158:6:i2cdevWrite16	48	static

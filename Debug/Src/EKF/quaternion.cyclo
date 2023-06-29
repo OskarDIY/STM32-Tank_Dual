@@ -1,0 +1,9 @@
+quaternion.h:29:22:Quaternion_Add	1
+quaternion.h:45:22:Quaternion_Multiply	1
+quaternion.h:61:22:Quaternion_Scalar	1
+quaternion.c:27:6:Quaternion_Normalize	1
+quaternion.c:36:6:Quaternion_FromEuler	1
+quaternion.c:54:6:Quaternion_ToEuler	6
+quaternion.c:92:6:Quaternion_FromRotationMatrix	7
+quaternion.c:183:6:Quaternion_RungeKutta4	2
+quaternion.c:222:6:Quaternion_From6AxisData	1
