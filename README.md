@@ -23,6 +23,8 @@ Tank Dual开发板是一款专门为机器人项目开发的STM32多功能控制
 
 原理图和源码的相关讲解可以在B站查看，https://space.bilibili.com/375400171/video
 
+开发板购买链接，https://item.taobao.com/item.htm?spm=a230r.7195193.1997079397.6.b6c05627CU6ucV&id=565040857054&abbucket=20
+
 ![输入图片说明](image/image2.png)
 
 上图中需要注意的是：  
