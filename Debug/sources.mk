@@ -20,6 +20,7 @@ C_UPPER_DEPS :=
 S_DEPS := 
 C_DEPS := 
 CC_DEPS := 
+OBJCOPY_HEX := 
 SIZE_OUTPUT := 
 C++_DEPS := 
 SU_FILES := 
