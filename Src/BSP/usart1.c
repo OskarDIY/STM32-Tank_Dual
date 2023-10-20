@@ -59,6 +59,8 @@ void USART1_Init(uint32_t baudrate)
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
+	USART_DeInit(USART1);
+
 	// 配置串口的工作参数
 	// 配置波特率
 	USART_InitStructure.USART_BaudRate = baudrate;
@@ -86,7 +88,11 @@ void USART1_Init(uint32_t baudrate)
 	
 
 	// 使能串口
-	USART_Cmd(USART1, ENABLE);	    
+	USART_Cmd(USART1, ENABLE);
+
+#ifdef __GNUC__
+	setvbuf(stdout, NULL, _IONBF, 0);
+#endif
 }
 
 
@@ -426,18 +432,18 @@ void ProcessMsg(radioMsg_t *msg)
 		{
 			while(USART_GetFlagStatus(USART1, USART_FLAG_TXE)== RESET)
 			{
-				
+
 			}
 			USART_SendData(USART1, ((uint8_t *)&ackMsg)[i]);
 		}
-		
+
 		// 因为STM32单片机是小端模式, 所以校验值的低字节存储在低地址, 先发送校验的低字节
 		while(USART_GetFlagStatus(USART1, USART_FLAG_TXE)== RESET)
 		{
 
 		}
 		USART_SendData(USART1, ackMsg.checksum);
-		
+
 		// 发送校验的高字节
 		while(USART_GetFlagStatus(USART1, USART_FLAG_TXE)== RESET)
 		{
@@ -447,7 +453,7 @@ void ProcessMsg(radioMsg_t *msg)
 	}
 	else if(msg->msgID == CMD_APPTCB9)	// 从上位机发送到手柄的命令,校准主板磁力计传感器,通知下位机发送原始数据, 发送校准结果给下位机
 	{
-		// 会有3个处理阶段, 
+		// 会有3个处理阶段,
 		// 第一阶段收到上位机读取磁力计数据的指令, 然后持续向上位机发送磁力计数据
 		// 第二个阶段, 上位机已经收集到了足够的数据, 发送指令要求下位机停止发送数据
 		// 第三个阶段, 上位机已经计算好了校准参数, 这是上位机发送校准参数给下位机, 下位机保存此数据
@@ -476,24 +482,108 @@ void ProcessMsg(radioMsg_t *msg)
 		xQueueSend(radioTxQueue, msg, 0);
 	}
 	
-	
-	
-	
-	
-	
 }
 
 
+
+#ifdef __GNUC__
+
+
+#define STDIN_FILENO  0
+#define STDOUT_FILENO 1
+#define STDERR_FILENO 2
+
+//int _isatty(int fd)
+//{
+//  if (fd >= STDIN_FILENO && fd <= STDERR_FILENO)
+//    return 1;
+//
+//  //errno = EBADF;
+//  return 0;
+//}
+
+int _write(int fd, char *ptr, int len)
+{
+	for(int t=0; t<len; t++)
+	{
+		USART_SendData(USART1, ptr[t]);
+		while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
+	}
+	return len;
+}
+
+int _read(int fd, char* ptr, int len)
+{
+	for(int t=0; t<len; t++)
+	{
+		/* 等待串口输入数据 */
+		while (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == RESET);
+
+		ptr[t] = (char)USART_ReceiveData(USART1);
+	}
+	return len;
+}
+
+
+//int _close(int fd)
+//{
+//  if (fd >= STDIN_FILENO && fd <= STDERR_FILENO)
+//    return 0;
+//
+//  //errno = EBADF;
+//  return -1;
+//}
+//
+//
+//int _lseek(int fd, int ptr, int dir)
+//{
+//  (void) fd;
+//  (void) ptr;
+//  (void) dir;
+//
+//  //errno = EBADF;
+//  return -1;
+//}
+//
+//#include <_ansi.h>
+//#include <_syslist.h>
+//#include <errno.h>
+//#include <sys/time.h>
+//#include <sys/times.h>
+//#include <limits.h>
+//#include <signal.h>
+//#include <stdint.h>
+//#include <stdio.h>
+//#include <unistd.h>
+//#include <stdarg.h>
+//#include <sys/types.h>
+//#include <sys/stat.h>
+//#include <stdarg.h>
+//
+//int _fstat(int fd, struct stat* st)
+//{
+//  if (fd >= STDIN_FILENO && fd <= STDERR_FILENO)
+//  {
+//    st->st_mode = S_IFCHR;
+//    return 0;
+//  }
+//
+//  errno = EBADF;
+//  return 0;
+//}
+
+
+#elif
 
 ///重定向c库函数printf到串口，重定向后可使用printf函数
 int fputc(int ch, FILE *f)
 {
 		/* 发送一个字节数据到串口 */
 		USART_SendData(USART1, (uint8_t) ch);
-		
+
 		/* 等待发送完毕 */
-		while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);		
-	
+		while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
+
 		return (ch);
 }
 
@@ -503,6 +593,13 @@ int fgetc(FILE *f)
 		/* 等待串口输入数据 */
 		while (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == RESET);
 
-		return (int)USART_ReceiveData(USART1);
+		return (char)USART_ReceiveData(USART1);
 }
+
+#endif
+
+
+
+
+
 

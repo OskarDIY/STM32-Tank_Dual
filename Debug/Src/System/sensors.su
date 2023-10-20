@@ -1,7 +1,7 @@
 ../Src/System/sensors.c:101:6:sensorsReadGyro	8	static
 ../Src/System/sensors.c:118:6:sensorsReadAcc	8	static
 ../Src/System/sensors.c:123:6:sensorsReadMag	8	static
-../Src/System/sensors.c:129:6:sensorsInterruptInit	32	static,ignoring_inline_asm
+../Src/System/sensors.c:129:6:sensorsInterruptInit	24	static,ignoring_inline_asm
 ../Src/System/sensors.c:163:6:sensorsDeviceInit	24	static
 ../Src/System/sensors.c:233:6:sensorsBiasObjInit	0	static
 ../Src/System/sensors.c:239:6:sensorsTest	8	static

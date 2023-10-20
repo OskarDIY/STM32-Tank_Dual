@@ -233,7 +233,7 @@ void Uart4Task(void *param)
 	{
 		if(ultrasonic_state1 == 2)
 		{
-			//printf("ultrasonic_distance1: %d mm\n", ultrasonic_distance1);
+			printf("ultrasonic_distance: %d mm\n", ultrasonic_distance1);
 			
 			// 向US100超声波模块发送测量指令0x55
 			while(USART_GetFlagStatus(UART4, USART_FLAG_TXE)== RESET)

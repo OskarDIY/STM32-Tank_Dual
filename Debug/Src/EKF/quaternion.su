@@ -4,6 +4,6 @@
 ../Src/EKF/quaternion.c:27:6:Quaternion_Normalize	24	static
 ../Src/EKF/quaternion.c:36:6:Quaternion_FromEuler	72	static
 ../Src/EKF/quaternion.c:54:6:Quaternion_ToEuler	48	static
-../Src/EKF/quaternion.c:92:6:Quaternion_FromRotationMatrix	24	static
+../Src/EKF/quaternion.c:92:6:Quaternion_FromRotationMatrix	32	static
 ../Src/EKF/quaternion.c:183:6:Quaternion_RungeKutta4	120	static
-../Src/EKF/quaternion.c:222:6:Quaternion_From6AxisData	88	static
+../Src/EKF/quaternion.c:222:6:Quaternion_From6AxisData	104	static

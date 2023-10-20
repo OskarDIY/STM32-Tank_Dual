@@ -1,5 +1,5 @@
-main.c:115:6:startTask	1
-main.c:67:5:main	1
-main.c:154:6:vApplicationIdleHook	1
-main.c:180:6:vApplicationMallocFailedHook	1
-main.c:189:6:vApplicationStackOverflowHook	1
+../Src/User/main.c:115:6:startTask	1
+../Src/User/main.c:67:5:main	1
+../Src/User/main.c:154:6:vApplicationIdleHook	1
+../Src/User/main.c:180:6:vApplicationMallocFailedHook	1
+../Src/User/main.c:189:6:vApplicationStackOverflowHook	1

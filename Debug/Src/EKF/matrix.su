@@ -10,4 +10,4 @@
 ../Src/EKF/matrix.c:187:6:arm_mat_setcolumn_f32	12	static
 ../Src/EKF/matrix.c:195:6:arm_mat_cumsum_f32	40	static
 ../Src/EKF/matrix.c:212:6:arm_fill_f32	12	static
-../Src/EKF/matrix.c:271:5:arm_mat_qr_decompositionT_f32	96	static
+../Src/EKF/matrix.c:271:5:arm_mat_qr_decompositionT_f32	104	static

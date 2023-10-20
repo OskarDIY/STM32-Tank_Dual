@@ -72,7 +72,7 @@ static void nrf_interruptCallback(void)
 /*无线配置初始化（地址、通道、速率）*/
 static void radioInit(void)
 {
-	// 加载STM32片内Flash存储器中保存的配置数据,包括地址、频率、摇杆校准数据
+	// 加载STM32片内Flash存储器中保存的配置数据,包括地址、频率
 	LoadConfigData();
 	
 	

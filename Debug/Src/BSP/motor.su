@@ -1,5 +1,5 @@
 ../Src/BSP/motor.c:51:6:TIM1_Init	48	static
-../Src/BSP/motor.c:110:6:TIM2_Init	48	static
+../Src/BSP/motor.c:110:6:TIM2_Init	40	static
 ../Src/BSP/motor.c:169:6:Motor1_Encoder_Init	48	static
 ../Src/BSP/motor.c:205:6:Motor2_Encoder_Init	48	static
 ../Src/BSP/motor.c:242:6:TIM5_IRQHandler	8	static

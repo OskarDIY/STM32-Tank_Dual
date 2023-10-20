@@ -1,4 +1,4 @@
-../Src/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c:2701:13:TI1_Config	16	static
+../Src/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c:2701:13:TI1_Config	12	static
 ../Src/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c:2748:13:TI2_Config	16	static
 ../Src/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c:122:6:TIM_DeInit	8	static
 ../Src/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c:226:6:TIM_TimeBaseInit	0	static

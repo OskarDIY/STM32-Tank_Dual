@@ -1,4 +1,4 @@
-ekf.c:146:6:EKF_AHRSInit	1
-ekf.c:159:6:EKF_AHRSUpdate	1
-ekf.c:308:6:EKF_AHRSGetQ	1
-ekf.c:316:6:EKF_AHRSGetAngle	6
+../Src/EKF/ekf.c:146:6:EKF_AHRSInit	1
+../Src/EKF/ekf.c:159:6:EKF_AHRSUpdate	1
+../Src/EKF/ekf.c:308:6:EKF_AHRSGetQ	1
+../Src/EKF/ekf.c:316:6:EKF_AHRSGetAngle	6

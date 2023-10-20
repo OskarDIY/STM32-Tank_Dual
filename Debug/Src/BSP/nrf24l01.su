@@ -1,9 +1,9 @@
 ../Src/BSP/nrf24l01.c:27:13:NRF_LowLevel_Init	72	static
 ../Src/BSP/nrf24l01.c:90:16:SPI_RWByte.constprop	8	static
+../Src/BSP/nrf24l01.c:105:16:writeReg	16	static
 ../Src/BSP/nrf24l01.c:116:16:readReg	16	static
-../Src/BSP/nrf24l01.c:142:16:writeBuf.isra	16	static
+../Src/BSP/nrf24l01.c:142:16:writeBuf	16	static
 ../Src/BSP/nrf24l01.c:127:16:readBuf.isra	16	static
-../Src/BSP/nrf24l01.c:105:16:writeReg.isra	16	static
 ../Src/BSP/nrf24l01.c:157:6:nrf_txPacket	16	static
 ../Src/BSP/nrf24l01.c:182:6:nrf_txPacket_test	48	static
 ../Src/BSP/nrf24l01.c:203:6:nrf_txPacketNoACK	16	static

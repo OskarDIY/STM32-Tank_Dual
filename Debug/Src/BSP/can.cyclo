@@ -1,3 +1,3 @@
-can.c:32:9:CAN_Mode_Init	1
-can.c:116:9:CanSendMsg	3
-can.c:151:9:CanReceiveMsg	2
+../Src/BSP/can.c:32:9:CAN_Mode_Init	1
+../Src/BSP/can.c:116:9:CanSendMsg	3
+../Src/BSP/can.c:151:9:CanReceiveMsg	2

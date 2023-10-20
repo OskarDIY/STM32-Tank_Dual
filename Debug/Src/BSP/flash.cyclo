@@ -1,2 +1,2 @@
-flash.c:96:6:SaveConfigData	5
-flash.c:35:6:LoadConfigData	3
+../Src/BSP/flash.c:96:6:SaveConfigData	5
+../Src/BSP/flash.c:35:6:LoadConfigData	3

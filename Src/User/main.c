@@ -11,7 +11,7 @@
   * Mail: 990092230@qq.com
   * Shop: www.mindsilicon.com
   *
-	* 该程序仅供学习使用，未经作者允许，不得用于其它任何用途
+  * 该程序仅供学习使用，未经作者允许，不得用于其它任何用途
   ******************************************************************************
   */
 
@@ -80,7 +80,7 @@ int main(void)
 	LED_Init();
 	
 	USART1_Init(115200);
-	printf("Hello  world !\r\n");
+	printf("GCC Hello  world !\r\n");
 	UART4_Init(9600);
 	UART5_Init(9600);
 	
@@ -123,7 +123,7 @@ void startTask(void *arg)
 	
 	xTaskCreate(MenuTask, "MENU", 1600, NULL, 5, NULL);										/*创建显示处理任务*/
 	
-	xTaskCreate(PlayMusic, "PlayMusic", 200, NULL, 4, NULL);			      /*创建音乐处理任务*/
+//	xTaskCreate(PlayMusic, "PlayMusic", 200, NULL, 4, NULL);			      /*创建音乐处理任务*/
 	
 	xTaskCreate(PowerTask, "POWER", 100, NULL, 5, NULL);
 	
@@ -133,9 +133,9 @@ void startTask(void *arg)
 	
 	xTaskCreate(Usart1Task, "USART1", 200, NULL, 5, NULL);
 	
-	xTaskCreate(Uart4Task, "UART4", 100, NULL, 5, NULL);
+	xTaskCreate(Uart4Task, "UART4", 150, NULL, 5, NULL);
 	
-	xTaskCreate(Uart5Task, "UART5", 100, NULL, 5, NULL);
+	xTaskCreate(Uart5Task, "UART5", 150, NULL, 5, NULL);
 	
 	// 打印剩余堆栈大小
 	printf("Free heap after starting: %d bytes\n", xPortGetFreeHeapSize());

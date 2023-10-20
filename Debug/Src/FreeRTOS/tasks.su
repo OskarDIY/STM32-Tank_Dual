@@ -2,7 +2,7 @@
 ../Src/FreeRTOS/tasks.c:3635:13:prvResetNextTaskUnblockTime	0	static
 ../Src/FreeRTOS/tasks.c:1656:20:prvTaskIsTaskSuspended	8	static
 ../Src/FreeRTOS/tasks.c:676:13:xTaskCreate	40	static,ignoring_inline_asm
-../Src/FreeRTOS/tasks.c:1048:7:vTaskDelete	24	static,ignoring_inline_asm
+../Src/FreeRTOS/tasks.c:1048:7:vTaskDelete	16	static,ignoring_inline_asm
 ../Src/FreeRTOS/tasks.c:1269:13:eTaskGetState	16	static
 ../Src/FreeRTOS/tasks.c:1340:14:uxTaskPriorityGet	8	static
 ../Src/FreeRTOS/tasks.c:1362:14:uxTaskPriorityGetFromISR	8	static,ignoring_inline_asm
@@ -25,7 +25,7 @@
 ../Src/FreeRTOS/tasks.c:2700:21:xTaskGetApplicationTaskTag	8	static
 ../Src/FreeRTOS/tasks.c:2731:13:xTaskCallApplicationTaskHook	0	static
 ../Src/FreeRTOS/tasks.c:2761:6:vTaskSwitchContext	16	static,ignoring_inline_asm
-../Src/FreeRTOS/tasks.c:1566:7:vTaskSuspend	24	static,ignoring_inline_asm
+../Src/FreeRTOS/tasks.c:1566:7:vTaskSuspend	16	static,ignoring_inline_asm
 ../Src/FreeRTOS/tasks.c:2820:6:vTaskPlaceOnEventList	16	static
 ../Src/FreeRTOS/tasks.c:2837:6:vTaskPlaceOnUnorderedEventList	16	static
 ../Src/FreeRTOS/tasks.c:2863:7:vTaskPlaceOnEventListRestricted	16	static

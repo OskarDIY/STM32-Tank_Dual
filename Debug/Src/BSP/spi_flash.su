@@ -1,4 +1,4 @@
-../Src/BSP/spi_flash.c:27:6:SPI_FLASH_Init	40	static
+../Src/BSP/spi_flash.c:27:6:SPI_FLASH_Init	32	static
 ../Src/BSP/spi_flash.c:403:4:SPI_FLASH_SendByte	24	static
 ../Src/BSP/spi_flash.c:272:6:SPI_FLASH_BufferRead	16	static
 ../Src/BSP/spi_flash.c:305:5:SPI_FLASH_ReadID	24	static

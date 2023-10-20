@@ -37,13 +37,13 @@ static void NRF_LowLevel_Init(void)
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI3, ENABLE); 
 
-	/* 配置SPI3的SCK(PB3),MISO(PB4),MOSI(PB5)引脚 */ 
+	/* 配置SPI3的SCK(PB3),MISO(PB4),MOSI(PB5)引脚 */
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5; 
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
 	
-	/* 配置NRF的CE(PC5),NSS(PA15)引脚 */ 
+	/* 配置NRF的CE(PC5),NSS(PA15)引脚 */
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5; 
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO_Init(GPIOC, &GPIO_InitStructure);
@@ -51,7 +51,7 @@ static void NRF_LowLevel_Init(void)
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_15; 
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
-	/* 配置NRF的IRQ引脚(PC13) */ 
+	/* 配置NRF的IRQ引脚(PC13) */
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
 	GPIO_Init(GPIOC, &GPIO_InitStructure);
@@ -70,15 +70,15 @@ static void NRF_LowLevel_Init(void)
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
 	
-	SPI_InitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex;  	/* 设置SPI单向或者双向的数据模式:SPI设置为双线双向全双工 */
-	SPI_InitStructure.SPI_Mode = SPI_Mode_Master;													/* 设置SPI工作模式:设置为主SPI */
-	SPI_InitStructure.SPI_DataSize = SPI_DataSize_8b;											/* 设置SPI的数据大小:SPI发送接收8位帧结构 */
-	SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low;														/* 选择了串行时钟的稳态:时钟悬空低 */
-	SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge;													/* 数据捕获于第一个时钟沿 */
-	SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;															/* NSS信号由硬件（NSS管脚）还是软件（使用SSI位）管理:内部NSS信号有SSI位控制 */
-	SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_8;		/*定义波特率预分频的值:波特率预分频值为4 */
-	SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB;										/* 指定数据传输从MSB位还是LSB位开始:数据传输从MSB位开始 */
-	SPI_InitStructure.SPI_CRCPolynomial = 7;															/* CRC值计算的多项式 */
+	SPI_InitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex;			/* 设置SPI单向或者双向的数据模式:SPI设置为双线双向全双工 */
+	SPI_InitStructure.SPI_Mode = SPI_Mode_Master;											/* 设置SPI工作模式:设置为主SPI */
+	SPI_InitStructure.SPI_DataSize = SPI_DataSize_8b;										/* 设置SPI的数据大小:SPI发送接收8位帧结构 */
+	SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low;												/* 选择了串行时钟的稳态:时钟悬空低 */
+	SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge;											/* 数据捕获于第一个时钟沿 */
+	SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;														/* NSS信号由硬件（NSS管脚）还是软件（使用SSI位）管理:内部NSS信号有SSI位控制 */
+	SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_8;			/* 定义波特率预分频的值:波特率预分频值为4 */
+	SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB;											/* 指定数据传输从MSB位还是LSB位开始:数据传输从MSB位开始 */
+	SPI_InitStructure.SPI_CRCPolynomial = 7;														/* CRC值计算的多项式 */
 	SPI_Init(SPI3, &SPI_InitStructure);  																	/* 根据SPI_InitStruct中指定的参数初始化外设SPIx寄存器 */
  
 	SPI_Cmd(SPI3, ENABLE);	/*使能SPI外设*/
@@ -112,7 +112,7 @@ static uint8_t writeReg(uint8_t reg, uint8_t value)
 	return status;       					
 }
 
-/* 读寄存器 */ 
+/* 读寄存器 */
 static uint8_t readReg(uint8_t reg)
 {
 	uint8_t reg_val;	    
@@ -341,16 +341,16 @@ void NRF_Init(enum nrfMode model)
 	nrf_setChannel(configParam.radio.channel);
 	nrf_setDataRate(configParam.radio.dataRate);
 	nrf_setPower(RADIO_POWER);		// 发射功率
-	nrf_setArd();									// 重发时间间隔设置
-	nrf_setArc(3);								// 重发次数
+	nrf_setArd();										// 重发时间间隔设置
+	nrf_setArc(3);										// 重发次数
 	
 	if(model == PRX_MODE)
 	{
-		writeReg(REG_CONFIG, 0x0f);   	/* IRQ收发完成中断开启,16位CRC,PRX */
+		writeReg(REG_CONFIG, 0x0f);   			/* IRQ收发完成中断开启,16位CRC,PRX */
 		writeReg(REG_DYNPD,0x01);				/* 使能RX_P0动态长度PLAYLOAD */
 		writeReg(REG_FEATURE,0x06);			/* 使能动态长度PLAYLOAD、发送ACK PLAYLOAD */
 		
-		writeReg(REG_EN_AA,0x01); 			/* 使能通道0的自动应答 */	
+		writeReg(REG_EN_AA,0x01); 				/* 使能通道0的自动应答 */
 		
 		writeReg(CMD_FLUSH_TX,0xff);		/* 冲洗TX_FIFO */
 		writeReg(CMD_FLUSH_RX,0xff);
@@ -358,8 +358,8 @@ void NRF_Init(enum nrfMode model)
 	else							 	
 	{
 		writeReg(REG_CONFIG, 0x0E);			// TX Mode, Power ON, 2Bytes CRC, Enable CRC, IRQ 收发完成中断开启
-		writeReg(REG_DYNPD, 0x01);				// 使能RX_P0动态长度PLAYLOAD
-		writeReg(REG_FEATURE, 0x06);		// 使能动态长度、ACK PLAYLOAD发送、W_TX_PAYLOAD_NOACK
+		writeReg(REG_DYNPD, 0x01);			// 使能RX_P0动态长度PLAYLOAD
+		writeReg(REG_FEATURE, 0x06);			// 使能动态长度、ACK PLAYLOAD发送、W_TX_PAYLOAD_NOACK
 		
 		writeReg(CMD_FLUSH_TX, 0xFF);		// 冲洗TX_FIFO
 		writeReg(CMD_FLUSH_RX, 0xFF);

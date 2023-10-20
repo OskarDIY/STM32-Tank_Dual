@@ -96,13 +96,13 @@ void UART5_Init(uint32_t baudrate)
 }
 
 
-// 串口4接收计数
+// 串口5接收计数
 uint16_t uart5RecCount = 0;
 
-// 串口4接收队列
+// 串口5接收队列
 xQueueHandle uart5RxQueue;
 
-// 串口4中断, 接收到的数据是否符合通信协议会在中断服务程序中进行判断, 不符合通信协议的数据将被忽略
+// 串口5中断, 接收到的数据是否符合通信协议会在中断服务程序中进行判断, 不符合通信协议的数据将被忽略
 //void UART4_IRQHandler(void)
 //{
 //	// temp用于缓存当前字
@@ -232,7 +232,7 @@ void Uart5Task(void *param)
 	{
 		if(ultrasonic_state2 == 2)
 		{
-			//printf("ultrasonic_distance2: %d mm\n", ultrasonic_distance2);
+			printf("ultrasonic_distance: %d mm\n", ultrasonic_distance2);
 			
 			// 向US100超声波模块发送测量指令0x55
 			while(USART_GetFlagStatus(UART5, USART_FLAG_TXE)== RESET)
@@ -250,7 +250,7 @@ void Uart5Task(void *param)
 
 
 
-// 串口4中断,
+// 串口5中断,
 void UART5_IRQHandler(void)
 {
 	static uint16_t temp = 0;

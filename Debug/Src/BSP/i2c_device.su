@@ -7,5 +7,5 @@
 ../Src/BSP/i2c_device.c:140:6:i2cdevWrite	56	static
 ../Src/BSP/i2c_device.c:103:6:i2cdevWriteByte	24	static
 ../Src/BSP/i2c_device.c:110:6:i2cdevWriteBit	40	static
-../Src/BSP/i2c_device.c:120:6:i2cdevWriteBits	40	static
+../Src/BSP/i2c_device.c:120:6:i2cdevWriteBits	32	static
 ../Src/BSP/i2c_device.c:158:6:i2cdevWrite16	48	static

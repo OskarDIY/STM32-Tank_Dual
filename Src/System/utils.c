@@ -62,7 +62,7 @@ void FileSystem_Init(void)
 	//f_mount()->find_volume()->disk_initialize->SPI_FLASH_Init()
 	res_flash = f_mount(&fs,"1:",1);
 	
-	/*----------------------- 格式化测试 -----------------*/  
+	/*----------------------- 格式化测试 -----------------*/
 	/* 如果没有文件系统就格式化创建创建文件系统 */
 	if(res_flash == FR_NO_FILESYSTEM)
 	{
@@ -81,7 +81,7 @@ void FileSystem_Init(void)
 			printf(">>SPI FLASH格式化完成...\r\n");
       /* 格式化后,先取消挂载 */
 			res_flash = f_mount(NULL,"1:",1);			
-      /* 重新挂载	*/			
+      /* 重新挂载	*/
 			res_flash = f_mount(&fs,"1:",1);
 		}
 		else
@@ -135,11 +135,11 @@ void FileSystem_Init(void)
   */
 FRESULT scan_files (char* path) 
 { 
-  FRESULT res; 		//部分在递归过程被修改的变量,不用全局变量	
+  FRESULT res; 		//部分在递归过程被修改的变量,不用全局变量
   FILINFO fno; 
   DIR dir; 
   int i;            
-  char *fn;        // 文件名	
+  char *fn;        // 文件名
 	
 #if _USE_LFN 
   /* 长文件名支持 */
@@ -164,24 +164,24 @@ FRESULT scan_files (char* path)
 #else 
       fn = fno.fname; 
 #endif 
-      //点表示当前目录,跳过			
+      //点表示当前目录,跳过
       if (*fn == '.') continue; 	
-      //目录,递归读取      
+      //目录,递归读取
       if (fno.fattrib & AM_DIR)         
 			{ 			
-        //合成完整目录名        
+        //合成完整目录名
         sprintf(&path[i], "/%s", fn); 		
-        //递归遍历         
+        //递归遍历
         res = scan_files(path);	
         path[i] = 0;         
-        //打开失败,跳出循环        
+        //打开失败,跳出循环
         if (res != FR_OK) 
 					break; 
       } 
 			else 
 			{ 
-				printf("%s/%s\r\n", path, fn);								//输出文件名	
-        /* 可以在这里提取特定格式的文件路径 */        
+				printf("%s/%s\r\n", path, fn);								//输出文件名
+        /* 可以在这里提取特定格式的文件路径 */
       }//else
     } //for
   } 
@@ -195,7 +195,7 @@ void FileSystem_Test(void)
   
 /*----------------------- 文件系统测试:写测试 -------------------*/
 	/* 打开文件,每次都以新建的形式打开,属性为可写 */
-	printf("\r\n******即将进行文件写入测试...******\r\n");	
+	printf("\r\n******即将进行文件写入测试...******\r\n");
 	res_flash = f_open(&fnew, "1:testfile.txt",FA_CREATE_ALWAYS|FA_WRITE|FA_READ);
 	if ( res_flash == FR_OK )
 	{
@@ -262,7 +262,7 @@ void FileSystem_Test(void)
     if(res_flash==FR_OK)
     {
       printf(">>文件读取成功,读到字节数据:%d\r\n",fnum);
-      printf(">>读取得的文件数据为:\r\n%s\r\n", ReadBuffer);	
+      printf(">>读取得的文件数据为:\r\n%s\r\n", ReadBuffer);
     }
     else
     {

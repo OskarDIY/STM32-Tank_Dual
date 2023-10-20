@@ -31,14 +31,14 @@
 ../Src/FatFs/ff.c:2809:9:f_sync	16	static
 ../Src/FatFs/ff.c:2857:9:f_close	8	static
 ../Src/FatFs/ff.c:3029:9:f_lseek	24	static
-../Src/FatFs/ff.c:3187:9:f_opendir	544	static
+../Src/FatFs/ff.c:3187:9:f_opendir	552	static
 ../Src/FatFs/ff.c:3243:9:f_closedir	8	static
 ../Src/FatFs/ff.c:3275:9:f_readdir	544	static
 ../Src/FatFs/ff.c:3369:9:f_stat	584	static
 ../Src/FatFs/ff.c:3404:9:f_getfree	40	static
 ../Src/FatFs/ff.c:3470:9:f_truncate	16	static
 ../Src/FatFs/ff.c:3526:9:f_unlink	624	static
-../Src/FatFs/ff.c:3595:9:f_mkdir	624	static
+../Src/FatFs/ff.c:3595:9:f_mkdir	632	static
 ../Src/FatFs/ff.c:3669:9:f_chmod	584	static
 ../Src/FatFs/ff.c:3711:9:f_rename	648	static
 ../Src/FatFs/ff.c:3789:9:f_utime	576	static
