@@ -1,7 +1,6 @@
 ../Src/BSP/usart1.c:42:6:USART1_Init	40	static
-../Src/BSP/usart1.c:107:6:USART1_IRQHandler	16	static
-../Src/BSP/usart1.c:188:6:Usart1LinkStatus	0	static
-../Src/BSP/usart1.c:239:6:ProcessMsg	56	static
-../Src/BSP/usart1.c:195:6:Usart1Task	64	static
-../Src/BSP/usart1.c:505:5:_write	24	static
-../Src/BSP/usart1.c:515:5:_read	24	static
+../Src/BSP/usart1.c:105:6:USART1_IRQHandler	16	static
+../Src/BSP/usart1.c:186:6:Usart1LinkStatus	0	static
+../Src/BSP/usart1.c:237:6:ProcessMsg	56	static
+../Src/BSP/usart1.c:193:6:Usart1Task	64	static
+../Src/BSP/usart1.c:503:5:_write	24	static

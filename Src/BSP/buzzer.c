@@ -105,11 +105,11 @@ void PlayMusic(void *param)
 	while(1)
 	{
 //		printf(">>PlayMusic Task...\r\n");
-		if(currMusic == MUSIC_MUTE)
-		{
-			vTaskDelay(20);
-		}
-		else
+//		if(currMusic == MUSIC_MUTE)
+//		{
+//			vTaskDelay(20);
+//		}
+//		else
 		{
 			TIM_Cmd(TIM6, ENABLE);
 			vTaskDelay(100);

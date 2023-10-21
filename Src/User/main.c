@@ -11,7 +11,7 @@
   * Mail: 990092230@qq.com
   * Shop: www.mindsilicon.com
   *
-  * 该程序仅供学习使用，未经作者允许，不得用于其它任何用途
+	* 该程序仅供学习使用，未经作者允许，不得用于其它任何用途
   ******************************************************************************
   */
 
@@ -42,7 +42,7 @@
 #include "radio.h"
 #include "flash.h"
 
-#include "FreeRTOS.h"
+#include "FreeRTOS.h"	// 此处"x"提示,是因为IDE误报,与代码无关，没有影响
 #include "task.h"
 
 #include "i2c_device.h"
@@ -60,7 +60,7 @@
 TaskHandle_t startTaskHandle;
 extern xTaskHandle radiolinkTaskHandle;
 
-void startTask(void *arg);
+static void startTask(void *arg);
 
 uint8_t can_buf[8] = {'H','i','!','C','A','N','!','\n'};
 
@@ -72,15 +72,13 @@ int main(void)
 	// 延时初始化
 	Delay_Init(72);
 	
-	Motor_Init();
-	
 	// 用户键初始化
 	UserKey_Init();
 	
 	LED_Init();
 	
 	USART1_Init(115200);
-	printf("GCC Hello  world !\r\n");
+	printf("Hello  world !\r\n");
 	UART4_Init(9600);
 	UART5_Init(9600);
 	
@@ -120,22 +118,22 @@ void startTask(void *arg)
 	printf("Free heap before starting: %d bytes\n", xPortGetFreeHeapSize());
 	
 	xTaskCreate(SensorTask, "SENSORS", 300, NULL, 5, NULL);			        /*创建传感器处理任务*/
-	
+
 	xTaskCreate(MenuTask, "MENU", 1600, NULL, 5, NULL);										/*创建显示处理任务*/
 	
-//	xTaskCreate(PlayMusic, "PlayMusic", 200, NULL, 4, NULL);			      /*创建音乐处理任务*/
+	//xTaskCreate(PlayMusic, "PlayMusic", 200, NULL, 4, NULL);			      /*创建音乐处理任务*/
 	
 	xTaskCreate(PowerTask, "POWER", 100, NULL, 5, NULL);
 	
 	xTaskCreate(MotorTask, "MOTOR", 100, NULL, 5, NULL);
 	
 	xTaskCreate(RadioTask, "RADIO", 100, NULL, 5, NULL);
-	
+
 	xTaskCreate(Usart1Task, "USART1", 200, NULL, 5, NULL);
 	
-	xTaskCreate(Uart4Task, "UART4", 150, NULL, 5, NULL);
+	xTaskCreate(Uart4Task, "UART4", 100, NULL, 5, NULL);
 	
-	xTaskCreate(Uart5Task, "UART5", 150, NULL, 5, NULL);
+	xTaskCreate(Uart5Task, "UART5", 100, NULL, 5, NULL);
 	
 	// 打印剩余堆栈大小
 	printf("Free heap after starting: %d bytes\n", xPortGetFreeHeapSize());

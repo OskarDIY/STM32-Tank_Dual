@@ -89,7 +89,7 @@ main-build: Tank_Dual_Pro.elf secondary-outputs
 
 # Tool invocations
 Tank_Dual_Pro.elf Tank_Dual_Pro.map: $(OBJS) $(USER_OBJS) D:\ProgramData\STM32CubeIDE\workspace_1.10.1\Tank_Dual_Pro\STM32F103RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "Tank_Dual_Pro.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\ProgramData\STM32CubeIDE\workspace_1.10.1\Tank_Dual_Pro\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tank_Dual_Pro.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "Tank_Dual_Pro.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\ProgramData\STM32CubeIDE\workspace_1.10.1\Tank_Dual_Pro\STM32F103RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tank_Dual_Pro.map" -Wl,--gc-sections -static -u_printf --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

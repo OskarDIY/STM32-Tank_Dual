@@ -1,5 +1,5 @@
 ../Src/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c:85:6:EXTI_DeInit	0	static
-../Src/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c:101:6:EXTI_Init	12	static
+../Src/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c:101:6:EXTI_Init	8	static
 ../Src/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c:157:6:EXTI_StructInit	0	static
 ../Src/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c:171:6:EXTI_GenerateSWInterrupt	0	static
 ../Src/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c:186:12:EXTI_GetFlagStatus	0	static

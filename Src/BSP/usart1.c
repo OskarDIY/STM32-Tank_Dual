@@ -58,8 +58,6 @@ void USART1_Init(uint32_t baudrate)
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
-	
-	USART_DeInit(USART1);
 
 	// 配置串口的工作参数
 	// 配置波特率
@@ -90,9 +88,9 @@ void USART1_Init(uint32_t baudrate)
 	// 使能串口
 	USART_Cmd(USART1, ENABLE);
 
-#ifdef __GNUC__
-	setvbuf(stdout, NULL, _IONBF, 0);
-#endif
+//#ifdef __GNUC__
+//	setvbuf(stdout, NULL, _IONBF, 0);
+//#endif
 }
 
 
@@ -489,10 +487,10 @@ void ProcessMsg(radioMsg_t *msg)
 #ifdef __GNUC__
 
 
-#define STDIN_FILENO  0
-#define STDOUT_FILENO 1
-#define STDERR_FILENO 2
-
+//#define STDIN_FILENO  0
+//#define STDOUT_FILENO 1
+//#define STDERR_FILENO 2
+//
 //int _isatty(int fd)
 //{
 //  if (fd >= STDIN_FILENO && fd <= STDERR_FILENO)
@@ -506,25 +504,26 @@ int _write(int fd, char *ptr, int len)
 {
 	for(int t=0; t<len; t++)
 	{
+		while(USART_GetFlagStatus(USART1,USART_FLAG_TC)!=SET);
 		USART_SendData(USART1, ptr[t]);
-		while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
+		//while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
 	}
 	return len;
 }
-
-int _read(int fd, char* ptr, int len)
-{
-	for(int t=0; t<len; t++)
-	{
-		/* 等待串口输入数据 */
-		while (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == RESET);
-
-		ptr[t] = (char)USART_ReceiveData(USART1);
-	}
-	return len;
-}
-
-
+//
+//int _read(int fd, char* ptr, int len)
+//{
+//	for(int t=0; t<len; t++)
+//	{
+//		/* 等待串口输入数据 */
+//		while (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == RESET);
+//
+//		ptr[t] = (char)USART_ReceiveData(USART1);
+//	}
+//	return len;
+//}
+//
+//
 //int _close(int fd)
 //{
 //  if (fd >= STDIN_FILENO && fd <= STDERR_FILENO)

@@ -50,15 +50,15 @@ motorStatus_t motorStatus =
 // 初始化用于驱动电机1的定时器，以便向A4950电机驱动芯片输出合适的PWM信号
 void TIM1_Init(void)
 {
-  GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitTypeDef GPIO_InitStructure;
 	TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
 
-  // 输出比较通道GPIO 初始化
+	// 输出比较通道GPIO 初始化
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_TIM1, ENABLE);
-  GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_8 | GPIO_Pin_11;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_Init(GPIOA, &GPIO_InitStructure);
+	GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_8 | GPIO_Pin_11;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
 	/*--------------------时基结构体初始化-------------------------*/
 	// 配置周期，这里配置为1ms
@@ -75,15 +75,15 @@ void TIM1_Init(void)
 	TIM_TimeBaseStructure.TIM_RepetitionCounter=0;	
 	// 初始化定时器
 	TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
-
-	/*--------------------输出比较结构体初始化-------------------*/	
 	
+	/*--------------------输出比较结构体初始化-------------------*/
+
 	TIM_OCInitTypeDef  TIM_OCInitStructure;
 	// 配置为PWM模式1
 	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
 	// 输出使能
 	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
-	// 输出通道电平极性配置	
+	// 输出通道电平极性配置
 	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
 	
 	// 输出比较通道 1
@@ -109,22 +109,22 @@ void TIM1_Init(void)
 // 初始化用于驱动电机2的定时器，以便向A4950电机驱动芯片输出合适的PWM信号
 void TIM2_Init(void)
 {
-  GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitTypeDef GPIO_InitStructure;
 	TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
 	
-  // 输出比较通道GPIO 初始化
+	// 输出比较通道GPIO 初始化
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
-  GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_2 | GPIO_Pin_3;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_Init(GPIOA, &GPIO_InitStructure);
+	GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_2 | GPIO_Pin_3;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
 	// 开启定时器时钟
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
-
+	
 	/*--------------------时基结构体初始化-------------------------*/
 	// 配置周期，这里配置为1ms
-	
+
 	// 自动重装载寄存器的值，累计TIM_Period+1个频率后产生一个更新或者中断
 	TIM_TimeBaseStructure.TIM_Period = MOTOR_PWM_RESOLUTION;	
 	// 驱动CNT计数器的时钟 = Fck_int/(psc+1)
@@ -137,15 +137,15 @@ void TIM2_Init(void)
 	TIM_TimeBaseStructure.TIM_RepetitionCounter=0;	
 	// 初始化定时器
 	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
-
-	/*--------------------输出比较结构体初始化-------------------*/	
 	
+	/*--------------------输出比较结构体初始化-------------------*/
+
 	TIM_OCInitTypeDef  TIM_OCInitStructure;
 	// 配置为PWM模式1
 	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
 	// 输出使能
 	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
-	// 输出通道电平极性配置	
+	// 输出通道电平极性配置
 	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
 	
 	// 输出比较通道 3
@@ -182,10 +182,10 @@ void Motor1_Encoder_Init(void)
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
   TIM_TimeBaseStructInit(&TIM_TimeBaseStructure);
-  TIM_TimeBaseStructure.TIM_Prescaler = 0;			// 预分频器 
+  TIM_TimeBaseStructure.TIM_Prescaler = 0;			// 预分频器
   TIM_TimeBaseStructure.TIM_Period = 0xFFFF;		// 设定计数器自动重装值
   TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;				// 选择时钟分频：不分频
-  TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;		// TIM向上计数  
+  TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;		// TIM向上计数
   TIM_TimeBaseInit(TIM5, &TIM_TimeBaseStructure);
   TIM_EncoderInterfaceConfig(TIM5, TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Rising);	// 使用编码器模式
 	
@@ -218,10 +218,10 @@ void Motor2_Encoder_Init(void)
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
 	
   TIM_TimeBaseStructInit(&TIM_TimeBaseStructure);
-  TIM_TimeBaseStructure.TIM_Prescaler = 0;			// 预分频器 
+  TIM_TimeBaseStructure.TIM_Prescaler = 0;			// 预分频器
   TIM_TimeBaseStructure.TIM_Period = 0xFFFF;		// 设定计数器自动重装值
   TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;				// 选择时钟分频：不分频
-  TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;		// TIM向上计数  
+  TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;		// TIM向上计数
   TIM_TimeBaseInit(TIM4, &TIM_TimeBaseStructure);
   TIM_EncoderInterfaceConfig(TIM4, TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Rising);	// 使用编码器模式
 	
@@ -570,12 +570,12 @@ extern uint8_t can_buf[8];
 
 void MotorTask(void *param)
 {
-	while(menu == RUNNING)
+	while(menu != RUNNING)
 	{
 		vTaskDelay(100);
 	}
 	
-//	Motor_Init();
+	Motor_Init();
 	
 	while(1)
 	{
