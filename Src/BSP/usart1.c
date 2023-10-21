@@ -14,11 +14,13 @@
   ******************************************************************************
   */ 
 
+#include <stdio.h>
+#include <errno.h>
+#include <string.h>
+#include <sys/stat.h>
 
 #include "usart1.h"
 #include "ff.h"
-#include <stdio.h>
-#include <string.h>
 #include "led.h"
 #include "i2c_oled.h"
 #include "radio.h"
@@ -487,66 +489,78 @@ void ProcessMsg(radioMsg_t *msg)
 #ifdef __GNUC__
 
 
-//#define STDIN_FILENO  0
-//#define STDOUT_FILENO 1
-//#define STDERR_FILENO 2
-//
-//int _isatty(int fd)
-//{
-//  if (fd >= STDIN_FILENO && fd <= STDERR_FILENO)
-//    return 1;
-//
-//  //errno = EBADF;
-//  return 0;
-//}
+#define STDIN_FILENO  0
+#define STDOUT_FILENO 1
+#define STDERR_FILENO 2
+
+int _isatty(int fd)
+{
+	if (fd >= STDIN_FILENO && fd <= STDERR_FILENO)
+		return 1;
+
+	errno = EBADF;
+	return 0;
+}
+
+int _getpid()
+{
+	return 0;
+}
+
+int _kill(int pid, int sig)
+{
+	errno = EINVAL;
+	return -1;
+}
+
 
 int _write(int fd, char *ptr, int len)
 {
 	for(int t=0; t<len; t++)
 	{
-		while(USART_GetFlagStatus(USART1,USART_FLAG_TC)!=SET);
+		//while(USART_GetFlagStatus(USART1,USART_FLAG_TC)!=SET);
 		USART_SendData(USART1, ptr[t]);
-		//while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
+		while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
 	}
 	return len;
 }
-//
-//int _read(int fd, char* ptr, int len)
-//{
-//	for(int t=0; t<len; t++)
-//	{
-//		/* 等待串口输入数据 */
-//		while (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == RESET);
-//
-//		ptr[t] = (char)USART_ReceiveData(USART1);
-//	}
-//	return len;
-//}
-//
-//
-//int _close(int fd)
-//{
-//  if (fd >= STDIN_FILENO && fd <= STDERR_FILENO)
-//    return 0;
-//
-//  //errno = EBADF;
-//  return -1;
-//}
-//
-//
-//int _lseek(int fd, int ptr, int dir)
-//{
-//  (void) fd;
-//  (void) ptr;
-//  (void) dir;
-//
-//  //errno = EBADF;
-//  return -1;
-//}
-//
+
+int _read(int fd, char* ptr, int len)
+{
+	for(int t=0; t<len; t++)
+	{
+		/* 等待串口输入数据 */
+		while (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == RESET);
+
+		ptr[t] = (char)USART_ReceiveData(USART1);
+	}
+	return len;
+}
+
+
+int _close(int fd)
+{
+  if (fd >= STDIN_FILENO && fd <= STDERR_FILENO)
+    return 0;
+
+  errno = EBADF;
+  return -1;
+}
+
+
+int _lseek(int fd, int ptr, int dir)
+{
+  (void) fd;
+  (void) ptr;
+  (void) dir;
+
+  errno = EBADF;
+  return -1;
+}
+
 //#include <_ansi.h>
 //#include <_syslist.h>
-//#include <errno.h>
+
 //#include <sys/time.h>
 //#include <sys/times.h>
 //#include <limits.h>
@@ -556,20 +570,21 @@ int _write(int fd, char *ptr, int len)
 //#include <unistd.h>
 //#include <stdarg.h>
 //#include <sys/types.h>
-//#include <sys/stat.h>
+
 //#include <stdarg.h>
-//
-//int _fstat(int fd, struct stat* st)
-//{
-//  if (fd >= STDIN_FILENO && fd <= STDERR_FILENO)
-//  {
-//    st->st_mode = S_IFCHR;
-//    return 0;
-//  }
-//
-//  errno = EBADF;
-//  return 0;
-//}
+
+int _fstat(int fd, struct stat* st)
+{
+  if (fd >= STDIN_FILENO && fd <= STDERR_FILENO)
+  {
+    st->st_mode = S_IFCHR;
+    return 0;
+  }
+
+  errno = EBADF;
+  return 0;
+}
+
 
 
 #elif
