@@ -576,26 +576,26 @@ void SensorTask(void *param)
 				Get_MagData(&(buffer[SENSORS_MPU6500_BUFF_LEN]));
 			}
 			
-//			EKF_AHRSUpdate((float *)&sensors.gyro, (float *)&sensors.acc, (float *)&sensors.mag, 0.001f * (float)(tick - lastWakeTime));
-//			EKF_AHRSGetAngle(attitude);
+			EKF_AHRSUpdate((float *)&sensors.gyro, (float *)&sensors.acc, (float *)&sensors.mag, 0.001f * (float)(tick - lastWakeTime));
+			EKF_AHRSGetAngle(attitude);
+
+			if(attitude[0] >= 0)
+			{
+				attitude[0] = 180 - attitude[0];
+			}
+			else
+			{
+				attitude[0] = -(180 + attitude[0]);
+			}
 			
-//			if(attitude[0] >= 0)
-//			{
-//				attitude[0] = 180 - attitude[0];
-//			}
-//			else
-//			{
-//				attitude[0] = -(180 + attitude[0]);
-//			}
-//			
-//			if(attitude[1] <= 0)
-//			{
-//				attitude[1] = 180 + attitude[1];
-//			}
-//			else
-//			{
-//				attitude[1] = attitude[1] - 180;
-//			}
+			if(attitude[1] <= 0)
+			{
+				attitude[1] = 180 + attitude[1];
+			}
+			else
+			{
+				attitude[1] = attitude[1] - 180;
+			}
 			
 			state.attitude.roll = attitude[0];
 			state.attitude.pitch = attitude[1];

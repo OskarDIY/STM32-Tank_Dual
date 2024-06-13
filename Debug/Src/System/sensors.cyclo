@@ -16,7 +16,7 @@
 ../Src/System/sensors.c:481:6:Get_AccGyroData	1
 ../Src/System/sensors.c:509:6:Get_MagData	2
 ../Src/System/sensors.c:734:6:sensorsAcquire	1
-../Src/System/sensors.c:535:6:SensorTask	18
+../Src/System/sensors.c:535:6:SensorTask	20
 ../Src/System/sensors.c:743:6:applyAxis3fLpf	2
 ../Src/System/sensors.c:439:6:processAccGyroMeasurements	2
 ../Src/System/sensors.c:751:6:sensorsAreCalibrated	1

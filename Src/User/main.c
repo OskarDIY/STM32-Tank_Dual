@@ -76,7 +76,7 @@ int main(void)
 	UserKey_Init();
 	
 	LED_Init();
-	
+
 	USART1_Init(115200);
 	printf("Hello  world !\r\n");
 	UART4_Init(9600);
@@ -96,7 +96,7 @@ int main(void)
 	CAN_Mode_Init(CAN_SJW_1tq,CAN_BS1_4tq,CAN_BS1_4tq,4,CAN_Mode_Normal);//CAN初始化环回模式,波特率1Mbps
 		
 	// 初始化看门狗
-//	watchdogInit(WATCHDOG_RELOAD_MS);
+	watchdogInit(WATCHDOG_RELOAD_MS);
 	
 	xTaskCreate(startTask, "START_TASK", 300, NULL, 1, &startTaskHandle);	/*创建起始任务*/
 
@@ -119,21 +119,21 @@ void startTask(void *arg)
 	
 	xTaskCreate(SensorTask, "SENSORS", 300, NULL, 5, NULL);			        /*创建传感器处理任务*/
 
-	xTaskCreate(MenuTask, "MENU", 1600, NULL, 5, NULL);										/*创建显示处理任务*/
+	xTaskCreate(MenuTask, "MENU", 1550, NULL, 4, NULL);						/*创建显示处理任务*/
 	
-	//xTaskCreate(PlayMusic, "PlayMusic", 200, NULL, 4, NULL);			      /*创建音乐处理任务*/
+	xTaskCreate(PlayMusic, "PlayMusic", 100, NULL, 4, NULL);			       /*创建音乐处理任务*/
 	
-	xTaskCreate(PowerTask, "POWER", 100, NULL, 5, NULL);
+	xTaskCreate(PowerTask, "POWER", 50, NULL, 4, NULL);
 	
 	xTaskCreate(MotorTask, "MOTOR", 100, NULL, 5, NULL);
 	
 	xTaskCreate(RadioTask, "RADIO", 100, NULL, 5, NULL);
 
-	xTaskCreate(Usart1Task, "USART1", 200, NULL, 5, NULL);
+	xTaskCreate(Usart1Task, "USART1", 100, NULL, 4, NULL);
 	
-	xTaskCreate(Uart4Task, "UART4", 100, NULL, 5, NULL);
+	xTaskCreate(Uart4Task, "UART4", 150, NULL, 4, NULL);
 	
-	xTaskCreate(Uart5Task, "UART5", 100, NULL, 5, NULL);
+	xTaskCreate(Uart5Task, "UART5", 100, NULL, 4, NULL);
 	
 	// 打印剩余堆栈大小
 	printf("Free heap after starting: %d bytes\n", xPortGetFreeHeapSize());
@@ -151,24 +151,17 @@ void startTask(void *arg)
 // 空闲任务,CPU空闲时执行
 void vApplicationIdleHook( void )
 {
-//	static u32 tickWatchdogReset = 0;
-//	static char pWriteBuffer[2024];
+//	static char pWriteBuffer[1124];
 
-	portTickType tickCount = getSysTickCnt();
-
-//	if (tickCount - tickWatchdogReset > WATCHDOG_RESET_MS)
-	{
-//		tickWatchdogReset = tickCount;
-		watchdogReset();
-	}
+	watchdogReset();
 	
 //	vTaskList((char *)&pWriteBuffer);
-//	printf("task_name  task_state  priority  stack  tasK_num\n");
+//	printf("task_name   state   priority   stack   num\n");
 //	printf("%s\n", pWriteBuffer);
 	
-	CanSendMsg(can_buf,8);//发送8个字节
+//	CanSendMsg(can_buf,8);//发送8个字节
 	
-	__WFI();	/*进入低功耗模式*/
+//	__WFI();	/*进入低功耗模式*/
 }
 
 

@@ -516,7 +516,7 @@ int _kill(int pid, int sig)
 
 int _write(int fd, char *ptr, int len)
 {
-	for(int t=0; t<len; t++)
+	for(uint16_t t=0; t<len; t++)
 	{
 		//while(USART_GetFlagStatus(USART1,USART_FLAG_TC)!=SET);
 		USART_SendData(USART1, ptr[t]);
@@ -557,21 +557,6 @@ int _lseek(int fd, int ptr, int dir)
   errno = EBADF;
   return -1;
 }
-
-//#include <_ansi.h>
-//#include <_syslist.h>
-
-//#include <sys/time.h>
-//#include <sys/times.h>
-//#include <limits.h>
-//#include <signal.h>
-//#include <stdint.h>
-//#include <stdio.h>
-//#include <unistd.h>
-//#include <stdarg.h>
-//#include <sys/types.h>
-
-//#include <stdarg.h>
 
 int _fstat(int fd, struct stat* st)
 {

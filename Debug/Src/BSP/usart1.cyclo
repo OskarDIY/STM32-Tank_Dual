@@ -10,4 +10,4 @@
 ../Src/BSP/usart1.c:528:5:_read	3
 ../Src/BSP/usart1.c:541:5:_close	2
 ../Src/BSP/usart1.c:551:5:_lseek	1
-../Src/BSP/usart1.c:576:5:_fstat	2
+../Src/BSP/usart1.c:561:5:_fstat	2

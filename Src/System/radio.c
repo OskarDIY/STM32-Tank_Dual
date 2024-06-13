@@ -75,7 +75,6 @@ static void radioInit(void)
 	// 加载STM32片内Flash存储器中保存的配置数据,包括地址、频率
 	LoadConfigData();
 	
-	
 	if(nrf_check() == SUCCESS)
 	{
 		NRF_Init(PRX_MODE);

@@ -218,7 +218,7 @@ uint8_t ultrasonic_state2 = 0;
 
 void Uart5Task(void *param)
 {
-	vTaskDelay(3000);
+//	vTaskDelay(3000);
 
 	// 向US100超声波模块发送测量指令0x55
 	while(USART_GetFlagStatus(UART5, USART_FLAG_TXE)== RESET)
@@ -228,6 +228,8 @@ void Uart5Task(void *param)
 	USART_SendData(UART5, 0x55);
 	ultrasonic_state2 = 0;
 	
+	vTaskDelay(100);
+
 	while(1)
 	{
 		if(ultrasonic_state2 == 2)
@@ -239,6 +241,13 @@ void Uart5Task(void *param)
 			{
 
 			}
+			USART_SendData(UART5, 0x55);
+			ultrasonic_state2 = 0;
+		}
+		else
+		{
+			//超声波超时复位
+			//printf("uart5 restart!\n");
 			USART_SendData(UART5, 0x55);
 			ultrasonic_state2 = 0;
 		}
@@ -259,17 +268,23 @@ void UART5_IRQHandler(void)
 	{
 		if(ultrasonic_state2 == 0)
 		{
+			/* 等待串口输入数据 */
+			while (USART_GetFlagStatus(UART5, USART_FLAG_RXNE) == RESET);
 			temp = USART_ReceiveData(UART5) << 8;
 			ultrasonic_state2 ++;
 		}
 		else if(ultrasonic_state2 == 1)
 		{
+			/* 等待串口输入数据 */
+			while (USART_GetFlagStatus(UART5, USART_FLAG_RXNE) == RESET);
 			temp |= USART_ReceiveData(UART5);
 			ultrasonic_distance2 = temp;
 			ultrasonic_state2 ++;
 		}
 		else
 		{
+			/* 等待串口输入数据 */
+			while (USART_GetFlagStatus(UART5, USART_FLAG_RXNE) == RESET);
 			USART_ReceiveData(UART5);
 		}
 		

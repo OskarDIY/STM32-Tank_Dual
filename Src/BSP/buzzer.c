@@ -38,7 +38,7 @@ void TIM6_Init(void)
 	// 配置周期，这里配置为1K
 	
 	// 自动重装载寄存器的值，累计TIM_Period+1个频率后产生一个更新或者中断
-	TIM_TimeBaseStructure.TIM_Period = 30;	
+	TIM_TimeBaseStructure.TIM_Period = 10;
 	// 驱动CNT计数器的时钟 = Fck_int/(psc+1)
 	TIM_TimeBaseStructure.TIM_Prescaler = 7200-1;	
 	// 时钟分频因子 ，配置死区时间时需要用到
@@ -102,18 +102,37 @@ void PlayMusic(void *param)
 	Buzzer_Init();
 	//TIM_Cmd(TIM6, ENABLE);
 	
+	TIM_Cmd(TIM6, ENABLE);
+	vTaskDelay(100);
+	TIM_Cmd(TIM6, DISABLE);
+	vTaskDelay(100);
+
+	TIM_Cmd(TIM6, ENABLE);
+	vTaskDelay(100);
+	TIM_Cmd(TIM6, DISABLE);
+	vTaskDelay(100);
+
+	TIM_Cmd(TIM6, ENABLE);
+	vTaskDelay(100);
+	TIM_Cmd(TIM6, DISABLE);
+	BUZZER_OFF;
+	vTaskDelay(100);
+
+
+
 	while(1)
 	{
-//		printf(">>PlayMusic Task...\r\n");
-//		if(currMusic == MUSIC_MUTE)
-//		{
-//			vTaskDelay(20);
-//		}
-//		else
+		//printf(">>PlayMusic Task...\r\n");
+		if(currMusic == MUSIC_MUTE)
+		{
+			vTaskDelay(20);
+		}
+		else
 		{
 			TIM_Cmd(TIM6, ENABLE);
 			vTaskDelay(100);
 			TIM_Cmd(TIM6, DISABLE);
+			BUZZER_OFF;
 			vTaskDelay(100);
 			
 			currMusic = MUSIC_MUTE;

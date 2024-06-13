@@ -1,4 +1,4 @@
 ../Src/BSP/buzzer.c:29:6:TIM6_Init	1
 ../Src/BSP/buzzer.c:68:6:TIM6_IRQHandler	2
 ../Src/BSP/buzzer.c:81:6:Buzzer_Init	1
-../Src/BSP/buzzer.c:99:6:PlayMusic	1
+../Src/BSP/buzzer.c:99:6:PlayMusic	2
